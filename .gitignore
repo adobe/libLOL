@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+.idea
+corpus/
+data/
+venv
+*.log
+*.err
+*.csv
+dist
+build
+lolc.egg-info

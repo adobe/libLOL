@@ -1,0 +1,6 @@
+include data/bash_huge.vectorizer
+include data/bash_huge.classifier2
+include data/bash_huge.known
+include data/cmd_huge.known
+include data/cmd_huge.vectorizer
+include data/cmd_huge.classifier2
