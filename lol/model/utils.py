@@ -250,13 +250,13 @@ class KeywordLabelGenerator:
 
 
 class WindowsFeatureExtraction(FeatureExtraction):
-    def __init__(self):
+    def __init__(self, base_path='data'):
         super().__init__()
         from lol.model.constants import WINDOWS_PATHS, WINDOWS_COMMANDS, WINDOWS_KEYWORDS, WINDOWS_REGEX_LIST
         self._paths = KeywordLabelGenerator("PATH", WINDOWS_PATHS, False)
         self._commands = KeywordLabelGenerator("COMMAND", WINDOWS_COMMANDS, True, platform='windows')
         self._keywords = KeywordLabelGenerator("KEYWORD", WINDOWS_KEYWORDS, True, platform='windows')
-        self._similarity = SimilarityLabelGenerator('data/win.bad.filtered', platform='windows')
+        self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='windows')
         self._regex = RegexLabelGenerator(WINDOWS_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
@@ -280,13 +280,13 @@ class WindowsFeatureExtraction(FeatureExtraction):
 
 
 class LinuxFeatureExtraction(FeatureExtraction):
-    def __init__(self):
+    def __init__(self, base_path='data/'):
         super().__init__()
         from lol.model.constants import LINUX_PATHS, LINUX_COMMANDS, LINUX_KEYWORDS, LINUX_REGEX_LIST
         self._paths = KeywordLabelGenerator("PATH", LINUX_PATHS, False)
         self._commands = KeywordLabelGenerator("COMMAND", LINUX_COMMANDS, True)
         self._keywords = KeywordLabelGenerator("KEYWORD", LINUX_KEYWORDS, True)
-        self._similarity = SimilarityLabelGenerator('data/bash.bad.filtered', platform='linux')
+        self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
         self._regex = RegexLabelGenerator(LINUX_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
