@@ -29,7 +29,7 @@ $ pip install lolc
 
 To test the installation you can use the following scripts or `ipython` commands, which are also in the [Quick start Jupyter Notebook](examples/01_quick_start.ipynb):
 
-####LINUX
+#### LINUX
 
 ```python
 from lol.api import LOLC, PlatformType
@@ -61,7 +61,7 @@ BAD
 IP_PRIVATE PATH_/BIN/SH COMMAND_TELNET telnet_sh LOOKS_LIKE_KNOWN_LOL
 ```
 
-####WINDOWS
+#### WINDOWS
 
 ```python
 from lol.api import LOLC, PlatformType
