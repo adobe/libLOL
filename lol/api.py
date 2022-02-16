@@ -38,6 +38,7 @@ class LOLC:
                 .replace('bash.bad.filtered', '')
         else:
             base_path = model_base
+        print(base_path)
 
         if platform == PlatformType.LINUX:
             if model_base is None:
@@ -105,6 +106,7 @@ class LOLC:
             else:
                 features = ' '.join(feats)
                 tags.append(features)
+                print(label)
                 if label == 1 or 'LOOKS_LIKE_KNOWN_LOL' in feats:
                     status.append('BAD')
                 else:

@@ -158,7 +158,7 @@ def _match_ips(text):
 
 class SimilarityLabelGenerator:
     def __init__(self, filename: str, platform='linux'):
-        print(filename)
+        #print(filename)
         self._platform = platform
         lines = open(filename).readlines()
         self._strings = []
@@ -270,7 +270,7 @@ class WindowsFeatureExtraction(FeatureExtraction):
         if base_path is None:
             self._similarity = SimilarityLabelGenerator('data/cmd.bad.filtered', platform='linux')
         else:
-            self._similarity = SimilarityLabelGenerator('data/{0}.known'.format(base_path), platform='linux')
+            self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
         self._regex = RegexLabelGenerator(WINDOWS_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
@@ -304,7 +304,7 @@ class LinuxFeatureExtraction(FeatureExtraction):
         if base_path is None:
             self._similarity = SimilarityLabelGenerator('data/bash.bad.filtered', platform='linux')
         else:
-            self._similarity = SimilarityLabelGenerator('data/{0}.known'.format(base_path), platform='linux')
+            self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
         self._regex = RegexLabelGenerator(LINUX_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
