@@ -38,8 +38,7 @@ class LOLC:
                 .replace('bash.bad.filtered', '')
         else:
             base_path = model_base
-        print(base_path)
-
+       
         if platform == PlatformType.LINUX:
             if model_base is None:
                 base_path = '{0}/bash_huge'.format(base_path)
