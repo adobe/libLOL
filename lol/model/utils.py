@@ -111,7 +111,7 @@ _re_ipv4 = r"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[
 
 def _match_ips(text):
     try:
-        ips = re.finditer(_re_ipv4, text)
+        ips = re.finditer(_re_ipv4, ' {0} '.format(text))
         labels = {}
         for ip in ips:
             ipt = ip_address(ip.group())
