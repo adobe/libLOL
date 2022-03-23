@@ -28,13 +28,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="lolc",
-    version="0.1.0.5",
+    version="0.1.0.6",
     author="Multiple authors",
     author_email="tiberiu44@gmail.com",
     description="Python module for detecting password, api keys hashes and any other string that resembles a randomly generated character sequence.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/adobe/lolc",
+    url="https://github.com/adobe/libLOL",
     packages=setuptools.find_packages(),
     install_requires=parse_requirements('requirements.txt', session=False),
     classifiers=(

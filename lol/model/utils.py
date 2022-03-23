@@ -160,7 +160,7 @@ class SimilarityLabelGenerator:
     def __init__(self, filename: str, platform='linux'):
         #print(filename)
         self._platform = platform
-        lines = open(filename).readlines()
+        lines = open(filename, encoding='utf-8').readlines()
         self._strings = []
         for s in lines:
             # s = s[:min(150, len(s))]
