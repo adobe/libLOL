@@ -105,6 +105,7 @@ class LOLC:
             else:
                 features = ' '.join(feats)
                 tags.append(features)
+                print(label)
                 if label == 1 or 'LOOKS_LIKE_KNOWN_LOL' in feats:
                     status.append('BAD')
                 else:

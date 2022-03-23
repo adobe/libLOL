@@ -1,7 +1,22 @@
+#
+# Copyright (c) 2022 Adobe Systems Incorporated. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 import datetime
 
 import re2 as re
-# import re
 import sys
 import collections
 import math
@@ -106,7 +121,7 @@ def posix_split_all(s: str, platform=1):
     return c_toks
 
 
-_re_ipv4 = r"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+_re_ipv4 = r"[^\w^\d]((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)[^\w^\d]"
 
 
 def _match_ips(text):
@@ -114,34 +129,38 @@ def _match_ips(text):
         ips = re.finditer(_re_ipv4, ' {0} '.format(text))
         labels = {}
         for ip in ips:
-            ipt = ip_address(ip.group())
-            if ipt.is_link_local:
-                resp = "link_local"
-            elif ipt.is_loopback:
-                resp = "loopback"
-            elif ipt.is_multicast:
-                resp = "multicast"
-            elif ipt.is_reserved:
-                resp = "reserved"
-            elif ipt.is_unspecified:
-                resp = "unspecified"
-            elif ipt.is_private:
-                resp = "private"
-            else:
-                resp = "public"
+            try:
+                ipt = ip_address(''.join(ch for ch in str(ip.group()) if ch.isalnum() or ch == "."))
+                if ipt.is_link_local:
+                    resp = "link_local"
+                elif ipt.is_loopback:
+                    resp = "loopback"
+                elif ipt.is_multicast:
+                    resp = "multicast"
+                elif ipt.is_reserved:
+                    resp = "reserved"
+                elif ipt.is_unspecified:
+                    resp = "unspecified"
+                elif ipt.is_private:
+                    resp = "private"
+                else:
+                    resp = "public"
 
-            resp = "IP_{0}".format(resp).upper()
-            if resp not in labels:
-                labels[resp] = 1
+                resp = "IP_{0}".format(resp).upper()
+                if resp not in labels:
+                    labels[resp] = 1
+            except:
+                pass
     except:
-        pass
+        labels = {}
     return [label for label in labels]
 
 
 class SimilarityLabelGenerator:
     def __init__(self, filename: str, platform='linux'):
+        #print(filename)
         self._platform = platform
-        lines = open(filename, encoding='utf-8').readlines()
+        lines = open(filename).readlines()
         self._strings = []
         for s in lines:
             # s = s[:min(150, len(s))]
@@ -160,6 +179,7 @@ class SimilarityLabelGenerator:
                 sys.stdout.flush()
 
     def __call__(self, string, threshold=0.5) -> bool:
+        string = str(string)
         if len(string) > 100 or len(string) < 6:
             return False
 
@@ -194,26 +214,16 @@ class RegexLabelGenerator:
                                 regex_dict]  # , max_mem=1024 * 1024 * 1024)
 
     def __call__(self, text):
-
+        text = ' {0} '.format(text)
         labels = []
         for cr in self._compiled_regex:
-            matches = re.finditer(cr, text)
+            matches = re.finditer(cr, ' ' + text)
             for matchNum, match in enumerate(matches, start=1):
-
-                # print ("Match {matchNum} was found at {start}-{end}: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()))
-                # print(match.groupdict())
-
                 for elem in match.groupdict():
                     if match.groupdict()[elem] is not None:
                         labels.append(str(elem))
 
         return labels
-        # labels = []
-        # for reg_dict in self._regex_dict:
-        #     # print(reg_dict[0])
-        #     if re.search(reg_dict[0], text):
-        #         labels.append(reg_dict[1])
-        # return labels
 
 
 class KeywordLabelGenerator:
@@ -224,6 +234,7 @@ class KeywordLabelGenerator:
         self._platform = platform
 
     def __call__(self, text: str):
+        text = str(text)
         labels = {}
         if self._tokenize:
             if self._platform == 'linux':
@@ -250,13 +261,16 @@ class KeywordLabelGenerator:
 
 
 class WindowsFeatureExtraction(FeatureExtraction):
-    def __init__(self, base_path='data'):
+    def __init__(self, base_path: str):
         super().__init__()
         from lol.model.constants import WINDOWS_PATHS, WINDOWS_COMMANDS, WINDOWS_KEYWORDS, WINDOWS_REGEX_LIST
         self._paths = KeywordLabelGenerator("PATH", WINDOWS_PATHS, False)
         self._commands = KeywordLabelGenerator("COMMAND", WINDOWS_COMMANDS, True, platform='windows')
         self._keywords = KeywordLabelGenerator("KEYWORD", WINDOWS_KEYWORDS, True, platform='windows')
-        self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='windows')
+        if base_path is None:
+            self._similarity = SimilarityLabelGenerator('data/cmd.bad.filtered', platform='linux')
+        else:
+            self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
         self._regex = RegexLabelGenerator(WINDOWS_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
@@ -276,17 +290,21 @@ class WindowsFeatureExtraction(FeatureExtraction):
 
         if not training and self._similarity(command):
             labels.append('LOOKS_LIKE_KNOWN_LOL')
+        labels = list(set(labels))
         return labels
 
 
 class LinuxFeatureExtraction(FeatureExtraction):
-    def __init__(self, base_path='data/'):
+    def __init__(self, base_path=None):
         super().__init__()
         from lol.model.constants import LINUX_PATHS, LINUX_COMMANDS, LINUX_KEYWORDS, LINUX_REGEX_LIST
         self._paths = KeywordLabelGenerator("PATH", LINUX_PATHS, False)
         self._commands = KeywordLabelGenerator("COMMAND", LINUX_COMMANDS, True)
         self._keywords = KeywordLabelGenerator("KEYWORD", LINUX_KEYWORDS, True)
-        self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
+        if base_path is None:
+            self._similarity = SimilarityLabelGenerator('data/bash.bad.filtered', platform='linux')
+        else:
+            self._similarity = SimilarityLabelGenerator('{0}.known'.format(base_path), platform='linux')
         self._regex = RegexLabelGenerator(LINUX_REGEX_LIST)
 
     def __call__(self, command: str, training=False) -> [str]:
@@ -306,6 +324,7 @@ class LinuxFeatureExtraction(FeatureExtraction):
 
         if not training and self._similarity(command):
             labels.append('LOOKS_LIKE_KNOWN_LOL')
+        labels = list(set(labels))
         return labels
 
 
