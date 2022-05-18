@@ -108,7 +108,7 @@ pip3 install -r requirements.txt
 
 ## Citing
 
-If you are using Living off the Land in any academic work, make sure to cite our (paper)[https://github.com/adobe/libLOL/raw/master/examples/iotbds_paper.pdf]:
+If you are using Living off the Land in any academic work, make sure to cite our [paper](https://github.com/adobe/libLOL/raw/master/examples/iotbds_paper.pdf):
 
 **APA**
 
