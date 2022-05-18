@@ -106,3 +106,26 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+## Citing
+
+If you are using Living off the Land in any academic work, make sure to cite our (paper)[https://github.com/adobe/libLOL/raw/master/examples/iotbds_paper.pdf]:
+
+**APA**
+
+Boros, T., Cotaie, A., Stan, A., Vikramjeet, K., Malik, V., & Davidson, J. (2022). Machine Learning and Feature Engineering for Detecting Living off the Land Attacks. 8th International Conference on Internet of Things, Big Data and Security.
+
+**Chicago**
+
+Boros, Tiberiu, Andrei Cotaie, Antrei Stan, Kumar Vikramjeet, Vivek Malik, Joseph Davidson. ‘Machine Learning and Feature Engineering for Detecting Living off the Land Attacks’. 8th International Conference on Internet of Things, Big Data and Security, 2022.
+
+**BibTeX**
+
+```
+ @ARTICLE {borosiotbds2022,
+    author  = "Boros,  Tiberiu and Cotaie, Andrei and Stan, Antrei and Vikramjeet, Kumar and Malik, Vivek and Davidson, Joseph",
+    title   = "Machine Learning and Feature Engineering for Detecting Living off the Land Attacks",
+    journal = "8th International Conference on Internet of Things, Big Data and Security",
+    year    = "2022"
+}
+```
+
